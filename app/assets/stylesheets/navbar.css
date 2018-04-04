@@ -76,6 +76,7 @@ form#session_inputs button {
     padding: 10px 0px;
     font-size: 17.5px;
     border-radius: 6px;
+    cursor: pointer;
 
 
 }
@@ -83,6 +84,24 @@ form#session_inputs button {
 form#session_inputs p {
     margin-top: 14px;
     text-align: center;
+    color: white;
+}
+
+form#session_inputs a {
+	color:white;
+
+}
+
+svg.svg-inline--fa.fa-bomb.fa-w-16.fa-4x {
+    color: black;
+    margin-top: 8px;
+}
+
+form#session_inputs #demo_button {
+    background-color: #2980b9;
+    border: 1px solid #2980b9;
+    margin-top: 15px;
+    cursor: pointer;
 }
 
 

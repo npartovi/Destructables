@@ -1,13 +1,23 @@
 .slider {
 	height: 700px;
+	width: 100%;
 }
 
 .slider.one {
-	background-image: url("https://i.ytimg.com/vi/fUY3Zn8JctI/maxresdefault.jpg");
-	background-size: cover;
+	background-image: url("slide1.jpg");
+	background-size: 100%;
+	background-position-y: -20px;
 }
 
 .slider.two {
-	
+	background-image: url("slide2.jpg");
+	background-size: 100%;
+
+}
+
+.slider.three {
+	background-image: url("slide3.jpg");
+	background-size: 100%;
+
 }
 

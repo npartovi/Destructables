@@ -12,6 +12,13 @@ class SessionForm extends React.Component {
 		};
 
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.demoLogin = this.demoLogin.bind(this)
+		this.demoState = { username: "username", password: "password" }
+	}
+
+	demoLogin(){
+		this.setState(this.demoState);
+		this.props.processForm(this.state);
 	}
 
 	handleSubmit(e){
@@ -37,17 +44,22 @@ class SessionForm extends React.Component {
 				<input type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
 		}
 
+		let demoButton = undefined
+		if(this.props.formType === "Login"){
+			demoButton = <button id="demo_button" onClick={this.demoLogin}  type="submit">Demo Login</button>
+		}
+
 		return(
 			<div>
 				<div id="blur"></div>
-				
-
 				<div id="session_form_container">
 					<form id="session_inputs" onSubmit={this.handleSubmit}>
 						<input type="text" placeholder="Username" value={this.state.username} onChange={this.update('username')}  />
 						<input type="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
+
 						{ email }
 						<button type="submit" >{this.props.formType}</button>
+						{ demoButton }
 						<p>New to Destructables? {this.props.navLink}</p>
 					</form>
 				</div>

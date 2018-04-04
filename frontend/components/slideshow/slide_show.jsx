@@ -12,13 +12,17 @@ class SimpleSlider extends React.Component {
     };
     return (
       <Slider {...settings}>
+
         <div className="slider one">
         </div>
-        <div>
-          <h3>2</h3>
+
+        <div className=" slider two">
         </div>
-        <div>
-          <h3>3</h3>
+
+
+
+        <div className="slider three">
+          
         </div>
         <div>
           <h3>4</h3>
