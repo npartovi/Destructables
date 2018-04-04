@@ -3,45 +3,27 @@ import { Link } from 'react-router-dom';
 
 class SessionButtons extends React.Component {
 	constructor(props){
-		super(props);
-		this.submitHandler = this.submitHandler.bind(this)
-	}
-
-
-	submitHandler(){
-		
-	}
-
-
-	sessionLinks(){
-		return(
-			<div>
-				<Link to="/signup">Sign Up</Link>
-				<br />
-				<Link to="/login">Login</Link>
-			</div>
-			)
-	}
-
-	logged_in() {
-		return(
-			<div>
-				<h1>Hello {this.currentUser.username} </h1>
-				<button onClick={this.submitHandler()}>Logout</button>
-			</div>
-			)
+		super(props)
+		this.logout = this.props.action;
 	}
 
 	render(){
-
-		this.currentUser = this.props.currentUser
-		this.logout = this.props.action
-
-		return(
-			<div>
-				{this.currentUser ? this.logged_in() : this.sessionLinks()}
-			</div>
-			)
+		if(this.props.currentUser){
+			return(
+				<div>
+					<h1>Hello {this.props.currentUser.username} </h1>
+					<button onClick={this.logout}>Logout</button>
+				</div>
+				)
+		}else {
+			return(
+				<div>
+					<Link to="/signup">signup</Link>
+					<br/>
+					<Link to="/login">login</Link>
+				</div>
+				)
+		}
 	}
 }
 
