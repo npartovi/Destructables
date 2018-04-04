@@ -1,10 +1,14 @@
 import React from 'react';
+import SessionButtonsContainer from './session/session_buttons_container';
 
 
 const App =() => (
 
 	<div>
-		<h1>Hello World</h1>
+		<nav>
+			<h1>Log In Form </h1>
+			<SessionButtonsContainer />
+		</nav>
 	</div>
 
 
