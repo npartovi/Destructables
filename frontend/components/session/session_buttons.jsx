@@ -17,10 +17,11 @@ class SessionButtons extends React.Component {
 				)
 		}else {
 			return(
+
 				<div className="session_buttons">
-					<Link to="/signup">signup</Link>
-					<br/>
-					<Link to="/login">login</Link>
+					<Link to="/login">Login</Link>
+					<span className="pipe">|</span>
+					<Link to="/signup">Sign up</Link>
 				</div>
 				)
 		}

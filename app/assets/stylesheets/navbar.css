@@ -1,3 +1,94 @@
 nav.nav-bar-main {
+	position: relative;
     display: flex;
+    background: #eee;
+    border-bottom: 1px solid #ddd;
+    height: 78px;
 }
+
+.container.nav {
+    margin: 0 auto;
+    width: 1700px;
+}
+
+.session_buttons {
+	float: right;
+	display: flex;
+	top: 26px;
+	position: relative;
+}
+
+.session_buttons a {
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 22px;
+    color: #777;
+    padding: 0 8px;
+    font-size: 12px;
+}
+
+.pipe {
+	color: #ccc;
+	position: relative;
+    top: 4px;
+}
+
+.greeting_container {
+    float: right;
+}
+
+div#session_form_container {
+    z-index: 1000;
+    position: absolute;
+    left: 0px;
+    top:79px;
+    height: 700px;
+    width: 400px;
+    left: 50px;
+    background: rgba(34,34,34,.25);
+}
+
+form#session_inputs {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 130px;
+    padding: 20px;
+}
+
+form#session_inputs input {
+    margin-bottom: 20px;
+    font-size: 16px;
+    height: auto;
+    padding: 9px 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #555;
+    background-color: #fff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border linear .2s,box-shadow linear .2s;
+}
+
+form#session_inputs button {
+    background-color: #e86c00;
+    border-color: #cf6000;
+    color: #fff;
+    padding: 10px 0px;
+    font-size: 17.5px;
+    border-radius: 6px;
+
+
+}
+
+form#session_inputs p {
+    margin-top: 14px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+

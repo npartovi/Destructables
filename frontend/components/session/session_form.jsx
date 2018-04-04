@@ -33,32 +33,24 @@ class SessionForm extends React.Component {
 		let email = undefined;
 		if(this.props.formType === 'Sign Up'){
 			email = 
-				<label>Email
-					<input type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
-				</label>
+				
+				<input type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
 		}
 
 		return(
 			<div>
-				<h1>{ this.props.formType }</h1>
+				<div id="blur"></div>
+				
 
-				<form onSubmit={this.handleSubmit}>
-					Please {this.props.formType} or {this.props.navLink}
-				<br />
-				<label>Username
-					<input type="text" value={this.state.username} onChange={this.update('username')}  />
-				</label>
-				<br />
-				<label>Password
-					<input type="password" value={this.state.password} onChange={this.update('password')} />
-				</label>
-				<br />
-
-				{ email }
-
-				<input type="submit" value={this.props.formType} />
-
-				</form>
+				<div id="session_form_container">
+					<form id="session_inputs" onSubmit={this.handleSubmit}>
+						<input type="text" placeholder="Username" value={this.state.username} onChange={this.update('username')}  />
+						<input type="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
+						{ email }
+						<button type="submit" >{this.props.formType}</button>
+						<p>New to Destructables? {this.props.navLink}</p>
+					</form>
+				</div>
 			</div>
 		)
 
