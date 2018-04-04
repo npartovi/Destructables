@@ -7,7 +7,8 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = {
 			username: "",
-			password: ""
+			password: "",
+			email: ""
 		};
 
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,17 +17,26 @@ class SessionForm extends React.Component {
 	handleSubmit(e){
 		e.preventDefault();
 		const user = Object.assign({}, this.state);
-		this.props.processForm(user);
+		this.props.processForm(user).then(() => this.props.history.push("/"));
 	}
 
 
 	update(field){
 		return (e) => {
+			e.preventDefault();
 			this.setState({[field]: e.target.value});
 		};
 	}
 
 	render(){
+
+		let email = undefined;
+		if(this.props.formType === 'Sign Up'){
+			email = 
+				<label>Email
+					<input type="text" placeholder="Email" value={this.state.email} onChange={this.update('email')} />
+				</label>
+		}
 
 		return(
 			<div>
@@ -42,6 +52,9 @@ class SessionForm extends React.Component {
 				<label>Password
 					<input type="password" value={this.state.password} onChange={this.update('password')} />
 				</label>
+				<br />
+
+				{ email }
 
 				<input type="submit" value={this.props.formType} />
 

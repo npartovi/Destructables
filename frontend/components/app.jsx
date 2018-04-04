@@ -7,15 +7,13 @@ import SignupFormContainer from './session/signup_form_container';
 
 const App =() => (
 
-	<div>
-		<nav>
+		<nav className="nav-bar-main">
 			<h1>Log In Form </h1>
 			<SessionButtonsContainer />
+			<Route path="/login" component={LoginFormContainer} />
+			<Route path="/signup" component={SignupFormContainer} />
 		</nav>
 
-		<Route path="/login" component={LoginFormContainer} />
-		<Route path="/signup" component={SignupFormContainer} />
-	</div>
 
 
 )

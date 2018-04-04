@@ -10,14 +10,14 @@ class SessionButtons extends React.Component {
 	render(){
 		if(this.props.currentUser){
 			return(
-				<div>
+				<div className="greeting_container">
 					<h1>Hello {this.props.currentUser.username} </h1>
 					<button onClick={this.logout}>Logout</button>
 				</div>
 				)
 		}else {
 			return(
-				<div>
+				<div className="session_buttons">
 					<Link to="/signup">signup</Link>
 					<br/>
 					<Link to="/login">login</Link>
