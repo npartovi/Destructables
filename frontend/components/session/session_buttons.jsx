@@ -37,16 +37,14 @@ class SessionButtons extends React.Component {
 
 		return(
 			<div>
-			<nav className="nav-bar-main">
-				<div className="container nav">
-					{this.sessionLinks()}
-					<Link to="/"><i className="fas fa-bomb fa-4x"></i></Link>
-				</div>
-			</nav>
-			<div className="Main">
-				<SimpleSlider />
-			</div>
+				<nav className="nav-bar-main">
+					<div className="container nav">
+						<Link to="/"><i className="fas fa-bomb fa-4x"></i></Link>
+						<Link to="/articles/new">Create a new Article</Link>
+						{this.sessionLinks()}
 
+					</div>
+				</nav>
 			</div>
 		)
 		

@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
 		}
 
 		return(
-			<div>
+			<div className="form-container">
 				<div id="blur"></div>
 				<div id="session_form_container">
 					<form id="session_inputs" onSubmit={this.handleSubmit}>
