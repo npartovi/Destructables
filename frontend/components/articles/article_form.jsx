@@ -1,18 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 class ArticleForm extends React.Component {
 	constructor(props){
-		super(props)
+		super(props);
 
-	};
+	}
 
 
 	render(){
 
-
-		<div>
-			<p>This is the create form</p>
-		</div>
+		return(
+			<div>
+				<p>This is the create form</p>
+			</div>
+		)
 	}
 
 

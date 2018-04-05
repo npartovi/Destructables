@@ -9,12 +9,11 @@ import SignupFormContainer from './session/signup_form_container';
 import ArticleFormContainer from './articles/article_form_container';
 
 import Footer from './footer/footer';
-import Splash from './session/splash'
+import Splash from './session/splash';
 
 
 
 const App =() => (
-
 		<div>
 			<header>
 				<SessionButtonsContainer />
@@ -23,14 +22,14 @@ const App =() => (
 			<Switch>
 				<AuthRoute path="/login" component={LoginFormContainer} />
 				<AuthRoute path="/signup" component={SignupFormContainer} />
-				<ProtectedRoute path='/articles/new' component={ArticleFormContainer} />
+				<ProtectedRoute path="/articles/new" component={ArticleFormContainer} />
 				<Route path= "/" component={Splash} />
 			</Switch>
+
 
 			<Footer />
 
 		</div>
-
 )
 
 export default App

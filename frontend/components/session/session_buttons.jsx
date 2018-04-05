@@ -33,8 +33,6 @@ class SessionButtons extends React.Component {
 
 
 	render(){
-		
-
 		return(
 			<div>
 				<nav className="nav-bar-main">
@@ -42,7 +40,6 @@ class SessionButtons extends React.Component {
 						<Link to="/"><i className="fas fa-bomb fa-4x"></i></Link>
 						<Link to="/articles/new">Create a new Article</Link>
 						{this.sessionLinks()}
-
 					</div>
 				</nav>
 			</div>
