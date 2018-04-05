@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SimpleSlider from '../slideshow/slide_show';
+
 
 class SessionButtons extends React.Component {
 	constructor(props){
@@ -7,7 +9,9 @@ class SessionButtons extends React.Component {
 		this.logout = this.props.action;
 	}
 
-	render(){
+
+	sessionLinks(){
+
 		if(this.props.currentUser){
 			return(
 				<div className="greeting_container">
@@ -25,6 +29,28 @@ class SessionButtons extends React.Component {
 				</div>
 				)
 		}
+	}
+
+
+	render(){
+		
+
+		return(
+			<div>
+			<nav className="nav-bar-main">
+				<div className="container nav">
+					{this.sessionLinks()}
+					<Link to="/"><i className="fas fa-bomb fa-4x"></i></Link>
+				</div>
+			</nav>
+			<div className="Main">
+				<SimpleSlider />
+			</div>
+
+			</div>
+		)
+		
+
 	}
 }
 

@@ -1,28 +1,22 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
 import SessionButtonsContainer from './session/session_buttons_container';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
-import SimpleSlider from './slideshow/slide_show';
 
 
 
 const App =() => (
 
 		<div>
-			<nav className="nav-bar-main">
-				<div className="container nav">
-					<Link to="/"><i className="fas fa-bomb fa-4x"></i></Link>
-					<SessionButtonsContainer />
-					<Route path="/login" component={LoginFormContainer} />
-					<Route path="/signup" component={SignupFormContainer} />
-				</div>
-			</nav>
+			<SessionButtonsContainer />
 
-			<div className="Main">
-				<SimpleSlider />
-			</div>
-		
+			<Switch>
+				<AuthRoute path="/login" component={LoginFormContainer} />
+				<AuthRoute path="/signup" component={SignupFormContainer} />
+			</Switch>
+
 		</div>
 
 )
