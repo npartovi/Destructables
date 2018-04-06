@@ -19,7 +19,7 @@ class ArticleIndex extends React.Component {
 					<ArticleIndexItem 
 						key={article.id}
 						title={article.title}
-						img_url={article.img_url}
+						imgUrl={article.imgUrl}
 					/>
 				))
 		)
@@ -32,8 +32,8 @@ class ArticleIndex extends React.Component {
 		}
 
 		return(
-			<div>
-				<ul>
+			<div className="article-homepage-wrapper">
+				<ul className="article-index-list">
 					{ this.renderArticles() }
 				</ul>
 			</div>

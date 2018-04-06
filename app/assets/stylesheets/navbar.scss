@@ -1,21 +1,24 @@
 nav.nav-bar-main {
-	position: relative;
-    display: flex;
     background: #eee;
     border-bottom: 1px solid #ddd;
-    height: 78px;
 }
 
-.container.nav {
-    margin: 0 auto;
-    width: 90%;
+
+.nav-bar-container {
+    padding: 30px;
+    height: 78px;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Rubik', sans-serif;
+    background-color: #EEEEEE;
+    align-items: center;
 }
 
 .session_buttons {
-	float: right;
 	display: flex;
-	top: 26px;
-	position: relative;
+    justify-content: flex-end;
+    position: absolute;
+    right: 30px;
 }
 
 .session_buttons a {
@@ -94,7 +97,7 @@ form#session_inputs a {
 
 svg.svg-inline--fa.fa-bomb.fa-w-16.fa-4x {
     color: black;
-    margin-top: 8px;
+    display:flex
 }
 
 form#session_inputs #demo_button {
@@ -111,6 +114,84 @@ form#session_inputs #demo_button {
     height: 100vh;
     background-attachment: fixed;
 }
+
+a.nav-bar-link {
+    margin-right: 40px;
+    text-decoration: none;
+}
+
+header.nav-bar-logo {
+    display: flex;
+}
+
+.nav-bar-logo {
+    display: flex; 
+}
+
+.nav-bar-logo h1 {
+    margin: auto;
+    font-size: 30px;
+    color: black;
+}
+
+.nav-bar-create-article-button {
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid #cccccc;
+    cursor: pointer;
+    padding: 7px 12px;
+    font-size: 14px;
+}
+
+.nav-bar-search {
+    margin-right: 15px;
+    position: relative;
+}
+
+.nav-bar-search-text {
+    width: 65%;
+    padding: 5px 5px;
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+.nav-bar-search-button {
+    color: white;
+    background-color: #c8c8c8;
+    border-color: #ccc;
+    position: absolute;
+    height: 100%;
+    left: 65%;
+    border-radius: 0 4px 4px 0;
+}
+
+.fa-lg {
+    font-size: 1.3333333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+
+.article-new-modal-header img {
+    width: 100%;
+}
+
+.article-form-modal-button {
+    background-color: #4165A5;
+    border-radius: 5px;
+    height:44px;
+    border:none;
+    font-size: 20px;
+    line-height: 5px;
+    color: white;
+    margin: 0 98px;
+    margin-bottom:20px;
+    width:256px;
+}
+
+
 
 
 

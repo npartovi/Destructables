@@ -1,0 +1,43 @@
+.article-new-modal-background {
+	z-index: 5;
+	position: fixed;
+	background: black;
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.article-new-modal-form-container{
+	max-height: 350px;
+	width: 455px;
+	background: white;
+	height: 410px;
+	border-radius: 6px;
+	opacity: 1;
+	overflow: hidden;
+	box-shadow: 1px 3px 7px rgba(0,0,0,0.3);
+    transition: opacity .3s linear,top .3s ease-out;
+    position: absolute;
+    z-index: 2500;
+    top: 20%;
+    left: 36%;
+}
+
+
+.article-new-modal-form {
+    margin: 0 auto;
+}
+
+.article-new-modal-input {
+    margin: 32px 42px;
+    padding: 10px;
+    border: 0;
+    border-bottom: solid 1px #c9c9c9;
+    transition: border .3s;
+    border-radius: 0;
+    font-size: 18px;
+    width: 350px;
+    color: #aaa;
+}

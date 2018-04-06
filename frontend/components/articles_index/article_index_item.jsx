@@ -1,13 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
-const ArticleIndexItem = ({ title, img_url}) => (
+const ArticleIndexItem = ({ title, imgUrl}) => (
 
-	<li>
-		<span> Hello </span>
-		<img src={ img_url } />
-		<p>{title}</p>
+	<li className="article-index-item">
+		<Link className="article-index-link" to="">
+			<img src={ imgUrl } />
+		</Link>
+		<div className="article-index-item-info">
+			<Link className="article-index-item-title" to="">
+				{title}
+			</Link>
+		</div>
+
+
+		
 	</li>
 
 )

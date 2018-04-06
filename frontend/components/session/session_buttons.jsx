@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SimpleSlider from '../slideshow/slide_show';
+import SearchBarContainer from '../searchbar/search_bar_container';
 
 
 class SessionButtons extends React.Component {
@@ -34,15 +35,26 @@ class SessionButtons extends React.Component {
 
 	render(){
 		return(
-			<div>
-				<nav className="nav-bar-main">
-					<div className="container nav">
-						<Link to="/"><i className="fas fa-bomb fa-4x"></i></Link>
-						<Link to="/articles/new">Create a new Article</Link>
-						{this.sessionLinks()}
-					</div>
-				</nav>
+				
+			<div className="nav-bar-container">
+
+				<Link className="nav-bar-link" to="/">
+					<header className="nav-bar-logo">
+						<i className="fas fa-bomb fa-4x"></i>
+						<h1>Destructables!</h1>
+					</header>
+				</Link>
+
+
+				<SearchBarContainer />
+
+				<button className="nav-bar-create-article-button">
+					<Link to="/articles/new">Create a new Article</Link>
+				</button>
+
+				{this.sessionLinks()}
 			</div>
+				
 		)
 		
 
