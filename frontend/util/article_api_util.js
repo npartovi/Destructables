@@ -1,18 +1,18 @@
-const fetchArticles = () => (
+export const fetchArticles = () => (
 	$.ajax({
 		url: 'api/articles',
 		method: 'GET',
 	})
 );
 
-const fetchArticle = (id) => (
+export const fetchArticle = (id) => (
 	$.ajax({
 		url: `api/articles/${id}`,
 		method: 'GET'
 	})
 );
 
-const createArticle = (article) => (
+export const createArticle = (article) => (
 	$.ajax({
 		url: 'api/articles/new',
 		method: "POST",

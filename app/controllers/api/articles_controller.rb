@@ -12,12 +12,12 @@ class Api::ArticlesController < ApplicationController
 	end
 
 	def show
-		@article.find(params[:id])
+		@article = Article.find(params[:id])
 		render :show
 	end
 
 	def index
-		@article = Article.all
+		@articles = Article.all
 		render :index
 	end
 

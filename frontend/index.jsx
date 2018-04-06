@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
-import configureStore from './store/store'
+import configureStore from './store/store';
+import { fetchArticles } from './actions/article_actions';
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 	window.getState = store.getState;
 	window.dispatch = store.dispatch;
+	window.fetchArticles = fetchArticles;
 
 	
 	const root = document.getElementById('root');

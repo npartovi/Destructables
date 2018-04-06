@@ -1,3 +1,4 @@
+\
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405173702) do
+ActiveRecord::Schema.define(version: 20180405230142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,10 +19,13 @@ ActiveRecord::Schema.define(version: 20180405173702) do
   create_table "articles", force: :cascade do |t|
     t.string "title", null: false
     t.string "body", null: false
-    t.string "img_url", null: false
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url_file_name"
+    t.string "img_url_content_type"
+    t.integer "img_url_file_size"
+    t.datetime "img_url_updated_at"
     t.index ["user_id", "title"], name: "index_articles_on_user_id_and_title", unique: true
   end
 
