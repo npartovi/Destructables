@@ -37,7 +37,8 @@ nav.nav-bar-main {
 }
 
 .greeting_container {
-    float: right;
+    position: absolute;
+    right: 30px;
 }
 
 div#session_form_container {
@@ -189,6 +190,11 @@ header.nav-bar-logo {
     margin: 0 98px;
     margin-bottom:20px;
     width:256px;
+}
+
+button.nav-bar-create-article-button a {
+    text-decoration: none;
+    color: black;
 }
 
 

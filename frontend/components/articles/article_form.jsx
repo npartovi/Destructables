@@ -75,14 +75,14 @@ class ArticleForm extends React.Component {
 						<div className="article-form-navbar-buttons">
 
 						<div>
-							<button class="project-form-navbar-button add">
+							<button class="article-form-navbar-button add">
 								<i class="fa fa-plus plus-small-icon" aria-hidden="true"></i>Add<i class="fa fa-caret-down caret-small-icon" aria-hidden="true"></i>
 							</button>
 						</div>
 
 						<button class="article-form-navbar-button submit">Publish</button>
 						</div>
-						
+
 					</nav>
 				</div>
 				
