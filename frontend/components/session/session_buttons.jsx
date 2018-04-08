@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SimpleSlider from '../slideshow/slide_show';
 import SearchBarContainer from '../searchbar/search_bar_container';
+import UserDropDown from './user_dropdown_menu';
 
 
 class SessionButtons extends React.Component {
@@ -10,15 +11,15 @@ class SessionButtons extends React.Component {
 		this.logout = this.props.action;
 	}
 
-
 	sessionLinks(){
 
 		if(this.props.currentUser){
 			return(
-				<div className="greeting_container">
-					<h1>Hello {this.props.currentUser.username} </h1>
-					<button onClick={this.logout}>Logout</button>
-				</div>
+				<UserDropDown 
+					profileImg={this.props.currentUser.profileImg} 
+					currentUser={this.props.currentUser.username}
+					logout={this.logout}
+						/>
 				)
 		}else {
 			return(
@@ -31,7 +32,6 @@ class SessionButtons extends React.Component {
 				)
 		}
 	}
-
 
 	render(){
 		return(

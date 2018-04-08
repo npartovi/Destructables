@@ -19,7 +19,7 @@ export const createArticle = (article) => (
 		processData: false,
 		contentType: false,
 		dataType: 'json',
-		data: { article }
+		data: article 
 	})
 );
 

@@ -1,0 +1,77 @@
+.dropdown__content {
+    width: 294px;
+    height: 187px;
+    position: absolute;
+    right: 3px;
+}
+
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+}
+
+.dropdown--active .dropdown__content {
+    display: block;
+}
+
+.dropdown__content {
+    background-color: white;
+    z-index: 2;
+    padding: 20px;
+    right: 10px;
+    width: 250px;
+    background-color: white;
+    z-index: 3;
+    border-radius: 5px;
+    height:114px;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+button.dropdown-new-article {
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+
+}
+
+button.dropdown-logout {
+    height: 37px;
+    width: 81px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 15px;
+    position: relative;
+    left: 178px;
+    color: black;
+    bottom: 56px;
+}
+
+li.account-dropdown__link.new-article {
+    position: relative;
+    bottom: 18px;
+}
+
+svg.svg-inline--fa.fa-user-circle.fa-w-16.fa-2x {
+    color: black;
+    top: 6px;
+    position: relative;
+}
+
+p.display-name {
+    font-size: 23px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    left: 45px;
+    bottom: 21px;
+}

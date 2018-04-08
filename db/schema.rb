@@ -1,4 +1,3 @@
-\
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180405230142) do
+ActiveRecord::Schema.define(version: 20180408050203) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +36,10 @@ ActiveRecord::Schema.define(version: 20180405230142) do
     t.string "profile_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "profile_img_file_name"
+    t.string "profile_img_content_type"
+    t.integer "profile_img_file_size"
+    t.datetime "profile_img_updated_at"
     t.index ["username", "session_token"], name: "index_users_on_username_and_session_token"
   end
 

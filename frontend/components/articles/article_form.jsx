@@ -18,6 +18,7 @@ class ArticleForm extends React.Component {
 		this.modalFormHandler = this.modalFormHandler.bind(this);
 		this.updateFile = this.updateFile.bind(this);
 		this.renderHeaderImagePreview = this.renderHeaderImagePreview.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
 
@@ -25,9 +26,6 @@ class ArticleForm extends React.Component {
 		const file = e.currentTarget.files[0];
 	    const fileReader = new FileReader();
 
-	    console.log(file);
-
-	    
 
 	    fileReader.onloadend = () =>{
 	    	this.setState( {coverImage:{imageFile: file, imageUrl: fileReader.result}});
@@ -39,13 +37,19 @@ class ArticleForm extends React.Component {
 	}
 
 	handleSubmit(e){
+		e.preventDefault();
 		const formData = new FormData();
-		formData.append("article[text]", )
+		formData.append("article[title]", this.state.article.title);
+		formData.append("article[img_url]",this.state.coverImage.imageFile);
+		formData.append("article[body]","text");
+
+
+		this.props.createArticle(formData);
 	}
 
 	update(field){
 		return (e) => {
-			this.setState({article: {[field]:e.target.value} });
+			this.setState({article: {[field]: e.target.value} });
 		}
 	}
 
@@ -121,7 +125,7 @@ class ArticleForm extends React.Component {
 							</button>
 						</div>
 
-						<button type="submit" className="article-form-navbar-button submit">Publish</button>
+						<button onClick={this.handleSubmit} type="submit" className="article-form-navbar-button submit">Publish</button>
 						</div>
 
 					</nav>
