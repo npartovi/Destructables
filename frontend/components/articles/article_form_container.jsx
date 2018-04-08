@@ -5,11 +5,11 @@ import { createArticle } from '../../util/article_api_util';
 
 
 const mapStateToProps = (state, ownProps) => ({
-	currentUser: state.session.currentUser
+	currentUser: state.sessions.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	createArticle: (article)=> dispatch(createArticle(article))
+	createArticle: (article) => dispatch(createArticle(article))
 
 });
 

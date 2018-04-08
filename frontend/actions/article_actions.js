@@ -5,7 +5,7 @@ export const RECEIVE_ARTICLE = "RECEIVE_ARTICLE";
 
 export const createArticle = (article) => (dispatch) => (
 	ArticleApiUtil.createArticle(article)
-		.then(article => dispatch(receiveArticle(dispatch)))
+		.then(article => dispatch(receiveArticle(article)))
 );
 
 export const fetchArticles = () => (dispatch) => (

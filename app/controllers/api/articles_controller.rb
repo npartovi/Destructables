@@ -4,7 +4,7 @@ class Api::ArticlesController < ApplicationController
 		@article = Article.new(article_params)
 		@article.user_id = current_user.id
 
-		if @article.save
+		if @article.save!
 			render :show
 		else
 			render json: @article.errors.full_messages

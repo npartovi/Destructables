@@ -4,7 +4,7 @@ import SessionButtons from './session_buttons';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps =(state) => ({
-	currentUser: state.session.currentUser
+	currentUser: state.sessions.currentUser
 });
 
 const mapDispatchToProps = (props) => ({

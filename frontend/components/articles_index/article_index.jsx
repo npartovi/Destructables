@@ -11,7 +11,6 @@ class ArticleIndex extends React.Component {
 		this.props.fetchArticles();
 	}
 
-
 	renderArticles(){
 
 		return(
@@ -19,14 +18,14 @@ class ArticleIndex extends React.Component {
 					<ArticleIndexItem 
 						key={article.id}
 						title={article.title}
+						article={article}
 						imgUrl={article.imgUrl}
+
 					/>
 				))
 		)
 	}
-
 	render(){
-
 		if(this.props.articles.length === 0){
 			return null
 		}

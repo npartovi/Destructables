@@ -14,11 +14,15 @@ export const fetchArticle = (id) => (
 
 export const createArticle = (article) => (
 	$.ajax({
-		url: 'api/articles/new',
+		url: 'api/articles',
 		method: "POST",
+		processData: false,
+		contentType: false,
+		dataType: 'json',
 		data: { article }
 	})
 );
+
 
 
 

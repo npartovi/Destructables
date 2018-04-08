@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Link, withRouter } from 'react-router-dom';
 
 class ArticleForm extends React.Component {
 	constructor(props){
@@ -10,13 +11,32 @@ class ArticleForm extends React.Component {
 			},
 			steps: [],
 			modalOpen: true,
-			renderForm: false
+			renderForm: false,
+			coverImage: {imageFile: null, imageUrl: null}
 		};
 
 		this.modalFormHandler = this.modalFormHandler.bind(this);
-
+		this.updateFile = this.updateFile.bind(this);
+		this.renderHeaderImagePreview = this.renderHeaderImagePreview.bind(this);
 	}
 
+
+	updateFile(e){
+		const file = e.currentTarget.files[0];
+	    const fileReader = new FileReader();
+
+	    console.log(file);
+
+	    
+
+	    fileReader.onloadend = () =>{
+	    	this.setState( {coverImage:{imageFile: file, imageUrl: fileReader.result}});
+	    }
+
+	     if (file) {
+	      fileReader.readAsDataURL(file);
+	    }
+	}
 
 	update(field){
 		return (e) => {
@@ -25,7 +45,7 @@ class ArticleForm extends React.Component {
 	}
 
 	modalFormHandler(e){
-		this.setState({modalOpen: false})
+		this.setState({modalOpen: false});
 	}
 
 
@@ -57,8 +77,30 @@ class ArticleForm extends React.Component {
 		)
 	}
 
+	renderHeaderImagePreview(){
+
+		console.log(this.state.coverImage.imageUrl)
+
+		if(this.state.coverImage.imageUrl){
+			return(
+				<div className='main-image-attachment-container'>
+		          <img className='main-image-attachment'
+		            src= {`${this.state.coverImage.imageUrL}`} />
+		        </div>
+			)
+		}else {
+			return(
+			<div className="plus-icon">
+				Click for Main Images
+			</div>
+			)
+		}
+	}
+
 
 	render(){
+
+		console.log(this.state)
 
 		return(
 			<div className="article-form">
@@ -66,21 +108,18 @@ class ArticleForm extends React.Component {
 				<div className="article-form-container">
 					<nav className="article-form-navbar">
 						<form className="article-form-navbar-attachment">
-							<input type="file" />
-							<div class="plus-icon">
-								<i class="fa fa-plus plus-big-icon" aria-hidden="true"></i>
-								Click for Main Images
-							</div>
+							<input type="file" onChange={this.updateFile}/>
+							{this.renderHeaderImagePreview()}
 						</form>
 						<div className="article-form-navbar-buttons">
 
 						<div>
-							<button class="article-form-navbar-button add">
-								<i class="fa fa-plus plus-small-icon" aria-hidden="true"></i>Add<i class="fa fa-caret-down caret-small-icon" aria-hidden="true"></i>
+							<button className="article-form-navbar-button add">
+								<i className="fa fa-plus plus-small-icon" aria-hidden="true"></i>Add<i className="fa fa-caret-down caret-small-icon" aria-hidden="true"></i>
 							</button>
 						</div>
 
-						<button class="article-form-navbar-button submit">Publish</button>
+						<button type="submit" className="article-form-navbar-button submit">Publish</button>
 						</div>
 
 					</nav>
@@ -95,4 +134,4 @@ class ArticleForm extends React.Component {
 
 }
 
-export default ArticleForm;
+export default withRouter(ArticleForm);
