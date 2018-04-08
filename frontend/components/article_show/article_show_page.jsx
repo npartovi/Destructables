@@ -14,9 +14,11 @@ class ArticleShow extends React.Component {
 		console.log(this.props)
 
 		return(
-			<div>
-				<h1>{this.props.article.title}</h1>
-				<img src={this.props.article.imgUrl} />
+			<div className="show-page-container">
+				<div className="show-page-header-information">
+					<img src={this.props.article.imgUrl} />
+					<h1>{this.props.article.title}</h1>
+				</div>
 			</div>
 		)
 	}

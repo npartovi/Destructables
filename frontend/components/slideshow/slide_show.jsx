@@ -13,7 +13,6 @@ class SimpleSlider extends React.Component {
     };
     return (
       <Slider {...settings}>
-
         <div className="slider one">
         </div>
         <div className=" slider two">

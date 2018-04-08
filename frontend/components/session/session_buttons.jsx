@@ -49,7 +49,7 @@ class SessionButtons extends React.Component {
 				<SearchBarContainer />
 
 				<button className="nav-bar-create-article-button">
-					<Link to="/articles/new">Create a new Article</Link>
+					<Link to="/articles/new">Create New Article</Link>
 				</button>
 
 				{this.sessionLinks()}

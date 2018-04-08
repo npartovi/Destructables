@@ -4,7 +4,7 @@ class User < ApplicationRecord
 	validates :username, :session_token, :email, uniqueness: true
 	validates :password, length: {minimum: 6, allow_nil: true}
 
-	has_attached_file :profile_img, default_url: "https://s3-us-west-1.amazonaws.com/destructabledev/articles/img_urls/000/000/012/original/default_profile_pic.png"
+	has_attached_file :profile_img, default_url: "https://s3-us-west-1.amazonaws.com/destructabledev/articles/img_urls/000/000/012/original/default_profile_pic.jpg"
   	validates_attachment_content_type :profile_img, content_type: /\Aimage\/.*\Z/
 
 	has_many :articles,
