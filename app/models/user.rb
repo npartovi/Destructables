@@ -11,6 +11,10 @@ class User < ApplicationRecord
 		class_name: 'Article',
 		foreign_key: :user_id
 
+	has_many :comments,
+		class_name: 'Comment',
+		foreign_key: :user_id
+
 	after_initialize :ensure_session_token
 
 	attr_reader :password

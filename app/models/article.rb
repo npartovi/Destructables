@@ -11,6 +11,10 @@ class Article < ApplicationRecord
 		class_name: 'User',
 		foreign_key: :user_id
 
+	has_many :comments,
+		class_name: 'Comment',
+		foreign_key: :article_id
+
 
 	def ensure_body_text
 		self.body ||= "test"
