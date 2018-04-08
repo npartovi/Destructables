@@ -10,4 +10,11 @@ class Article < ApplicationRecord
 	belongs_to :user,
 		class_name: 'User',
 		foreign_key: :user_id
+
+
+	def ensure_body_text
+		self.body ||= "test"
+	end
+
+	
 end

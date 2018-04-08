@@ -38,6 +38,11 @@ class ArticleForm extends React.Component {
 	    }
 	}
 
+	handleSubmit(e){
+		const formData = new FormData();
+		formData.append("article[text]", )
+	}
+
 	update(field){
 		return (e) => {
 			this.setState({article: {[field]:e.target.value} });
@@ -78,14 +83,11 @@ class ArticleForm extends React.Component {
 	}
 
 	renderHeaderImagePreview(){
-
-		console.log(this.state.coverImage.imageUrl)
-
 		if(this.state.coverImage.imageUrl){
 			return(
 				<div className='main-image-attachment-container'>
 		          <img className='main-image-attachment'
-		            src= {`${this.state.coverImage.imageUrL}`} />
+		            src= {`${this.state.coverImage.imageUrl}`} />
 		        </div>
 			)
 		}else {

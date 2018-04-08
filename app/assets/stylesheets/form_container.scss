@@ -76,6 +76,25 @@
     padding: 9px 17px;
 }
 
+.main-image-attachment-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main-image-attachment {
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 120px;
+    max-height: 120px;
+    align-self: center;
+    margin-right: 10px;
+    vertical-align: middle;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    position: relative;
+    right: 550px;
+}
+
 
 
 
