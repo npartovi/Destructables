@@ -1,10 +1,10 @@
 import * as CommentApiUtil from '../util/comment_api_util';
 
-export default RECEIVE_ALL_COMMENTS = "RECEIVE_ALL_COMMENTS";
+export const RECEIVE_ALL_COMMENTS = "RECEIVE_ALL_COMMENTS";
 
 
-export const fetchComments = () => dispatch => (
-	CommentApiUtil.fetchComments()
+export const fetchComments = (articleId) => dispatch => (
+	CommentApiUtil.fetchComments(articleId)
 		.then(comments => dispatch(receiveAllComments(comments)))
 );
 
