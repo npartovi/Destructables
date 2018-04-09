@@ -1,5 +1,6 @@
 import { RECEIVE_ALL_COMMENTS } from '../actions/comment_action';
 import { RECEIVE_ARTICLE } from '../actions/article_actions';
+import merge from 'lodash/merge';
 
 
 const CommentReducer = (state = {}, action) => {
@@ -8,10 +9,12 @@ const CommentReducer = (state = {}, action) => {
 		case RECEIVE_ALL_COMMENTS:
 			return Object.assign({}, state, action.comments.comments);
 		case RECEIVE_ARTICLE:
-			return Object.assign({}, state, action.payload.comments);
+			const newState = action.payload.comments;
+			return Object.assign({}, newState);
 		default:
 			return state;
 	}
 };
+
 
 export default CommentReducer;

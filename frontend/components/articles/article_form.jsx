@@ -44,7 +44,7 @@ class ArticleForm extends React.Component {
 		formData.append("article[body]","text");
 
 
-		this.props.createArticle(formData).then(this.props.history.push("/"));
+		this.props.createArticle(formData).then(() => this.props.history.push("/"));
 	}
 
 	update(field){

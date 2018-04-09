@@ -32,6 +32,9 @@ class CommentForm extends React.Component {
 		if(this.props.currentUser){
 			return(
 				<div className="comments-form-container">
+					<div className="comment-profile-img">
+						<img src={this.props.currentUser.profileImg} />
+					</div>
 					<form onSubmit={() => this.commentSubmitHandler()} className="comments-form">
 						<textarea className="comment_input" rows="10" className="comment-input" onChange={this.update('body')} value={this.state.body} />
 						<button type="submit">Post Comment </button>

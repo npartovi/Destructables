@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ArticleForm from './article_form';
-import { createArticle } from '../../util/article_api_util';
+import { createArticle } from '../../actions/article_actions';
 import { withRouter } from 'react-router-dom';
 
 
