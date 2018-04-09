@@ -33,7 +33,7 @@ class CommentForm extends React.Component {
 			return(
 				<div className="comments-form-container">
 					<form onSubmit={() => this.commentSubmitHandler()} className="comments-form">
-						<textarea className="comment-input" onChange={this.update('body')} value={this.state.body} />
+						<textarea className="comment_input" rows="10" className="comment-input" onChange={this.update('body')} value={this.state.body} />
 						<button type="submit">Post Comment </button>
 					</form>
 				</div>
@@ -44,6 +44,7 @@ class CommentForm extends React.Component {
 	}
 
 	renderComments(){
+
     	const comments = Object.values(this.props.comments);
 
 	    if (comments && comments.length > 0) {
@@ -65,11 +66,6 @@ class CommentForm extends React.Component {
 	      return null;
 	    }
 	}
-
-
-
-
-
 
 	render(){
 

@@ -18,7 +18,7 @@ class ArticleForm extends React.Component {
 		this.modalFormHandler = this.modalFormHandler.bind(this);
 		this.updateFile = this.updateFile.bind(this);
 		this.renderHeaderImagePreview = this.renderHeaderImagePreview.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this)
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 
@@ -44,7 +44,7 @@ class ArticleForm extends React.Component {
 		formData.append("article[body]","text");
 
 
-		this.props.createArticle(formData);
+		this.props.createArticle(formData).then(this.props.history.push("/"));
 	}
 
 	update(field){
@@ -77,7 +77,7 @@ class ArticleForm extends React.Component {
 							<form className="article-new-modal-form">
 								<input type="text" onChange={this.update('title')} className="article-new-modal-input" />
 								<br/>
-								<button onClick={this.modalFormHandler} className="article-form-modal-button">Start Destructable</button>
+								<button type="button" onClick={this.modalFormHandler} className="article-form-modal-button">Start Destructable</button>
 							</form>
 						</div>
 					</div>
@@ -140,4 +140,4 @@ class ArticleForm extends React.Component {
 
 }
 
-export default withRouter(ArticleForm);
+export default ArticleForm;

@@ -1,0 +1,28 @@
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+
+.comments-form-container {
+	border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f6f6f6;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: center;
+}
+
+textarea.comment-input {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 86px;
+}
+

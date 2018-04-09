@@ -11,8 +11,6 @@ class ArticleShow extends React.Component {
 	}
 
 
-
-
 	renderCommentsAndForm(){
 		if(this.props.article){
 			return(
@@ -24,6 +22,7 @@ class ArticleShow extends React.Component {
 						fetchComments={this.props.fetchComments}
 						deleteComment={this.props.deleteComment}
 						currentUser={this.props.currentUser}
+						createComment={this.props.createComment}
 					 />
 				</div>
 			)
@@ -32,21 +31,28 @@ class ArticleShow extends React.Component {
 		}
 	}
 
-	render(){
 
-		console.log(this.props)
-
-		return(
-			<div className="show-page-wrapper">
+	renderHeaderShow(){
+		if(this.props.article){
+			return(
 				<div className="show-page-container">
 					<div className="show-page-header-information">
 						<img src={this.props.article.imgUrl} />
 						<h1>{this.props.article.title}</h1>
-						<div className="comments-main-container">
-							{this.renderCommentsAndForm()}
-						</div>
 					</div>
 				</div>
+			)
+		} else {
+			return null
+		}
+	}
+
+	render(){
+
+		return(
+			<div className="show-page-wrapper">
+			{this.renderHeaderShow()}
+			{this.renderCommentsAndForm()}
 			</div>
 		)
 	}

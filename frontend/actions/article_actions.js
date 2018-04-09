@@ -25,7 +25,7 @@ const receiveAllArticles = (articles) => ({
 	articles
 });
 
-const receiveArticle = (article) => ({
+const receiveArticle = (payload) => ({
 	type: RECEIVE_ARTICLE,
-	article
+	payload
 });

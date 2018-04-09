@@ -30,9 +30,9 @@ class UserDropDown extends React.Component {
 			              </a>
 			            </li>
 			            <li className="account-dropdown__link new-article">
-			              <a className="account-dropdown__link__anchor" href="#" onClick={this.handleLinkClick}>
-			                <Link to="articles/new"><button className="dropdown-new-article">New Article</button></Link>
-			              </a>
+			              <Link to="articles/new" className="account-dropdown__link__anchor" href="#" onClick={this.handleLinkClick}>
+			                <button className="dropdown-new-article">New Article</button>
+			              </Link>
 			            </li>
 		          </ul>
 		        </DropdownContent>

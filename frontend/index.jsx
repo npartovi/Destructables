@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import { fetchArticles } from './actions/article_actions';
+import { fetchComments } from './actions/comment_action';
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	window.getState = store.getState;
 	window.dispatch = store.dispatch;
 	window.fetchArticles = fetchArticles;
+	window.fetchComments = fetchComments;
 
 	
 	const root = document.getElementById('root');

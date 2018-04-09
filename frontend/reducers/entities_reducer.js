@@ -5,5 +5,5 @@ import CommentsReducer from './comment_reducer';
 
 export default combineReducers ({
 	articles: ArticlesReducer,
-	comments :CommentsReducer
+	comments: CommentsReducer
 });

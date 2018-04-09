@@ -18,7 +18,7 @@ export const deleteComment = (commentId) => dispatch =>(
 
 
 const receiveAllComments = (comments) => ({
-	RECEIVE_ALL_COMMENTS,
+	type: RECEIVE_ALL_COMMENTS,
 	comments
 });
 
