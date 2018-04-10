@@ -6,13 +6,12 @@ Rails.application.routes.draw do
   	resource :session, only: [:create, :destroy]
   	resources :articles, only: [:show, :index, :create] do
   		resources :comments, only:[:create, :index]
+      resources :steps, only: [:create, :index]
   	end
   end
 
   resources :comments, only: [:destroy]
 
   root "static_pages#root"
-
-  
 
 end

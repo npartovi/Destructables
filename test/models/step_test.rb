@@ -1,18 +1,19 @@
 # == Schema Information
 #
-# Table name: comments
+# Table name: steps
 #
 #  id         :integer          not null, primary key
-#  body       :string
-#  user_id    :integer
-#  article_id :integer
+#  title      :string           not null
+#  body       :string           not null
+#  ord        :integer          not null
+#  article_id :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class CommentTest < ActiveSupport::TestCase
+class StepTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

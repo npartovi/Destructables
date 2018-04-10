@@ -31,7 +31,7 @@ const receiveArticle = (payload) => ({
 });
 
 
-export const searchProject = (query) => dispatch => {
-  return ArticleAPIUtil.searchProject(query).then((projects) => {
-    return dispatch(receiveProjects(projects))}
-)};
+// export const searchProject = (query) => dispatch => {
+//   return ArticleAPIUtil.searchProject(query).then((projects) => {
+//     return dispatch(receiveProjects(projects))}
+// )};

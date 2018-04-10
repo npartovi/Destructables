@@ -34,9 +34,100 @@ form.comments-form button {
     margin: 15px 0 0 10px;
     font-size: 14px;
     padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
 }
 
 .comment-profile-img img {
     width: 50px;
     height: 50px;
 }
+
+form.comments-form {
+    width: 100%;
+}
+
+.submit-button-comment {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comment-profile-img {
+    padding-right: 16px;
+}
+
+.comment-title-header {
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+.comment-title-header h1 {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+li.comment-list-item img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+li.comment-list-item {
+    border-top: 1px solid #ccc;
+    padding: 20px 0px;
+}
+
+.comments-show-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-list-item-body{
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    line-height: 22px;
+    width: 77%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 41px;
+}
+
+.comment-username{
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 56px;
+    color: #4971b6;
+}
+
+
+.comment-header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    right: 27px;
+    top: 3px;
+}
+
+.comment-date {
+    color: #C9C9C9;
+}
+
+
+.comment-body-text {
+    margin-left: 117px;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    line-height: 22px;
+    width: 77%;
+}
+
+
+
+
+
+
+
+

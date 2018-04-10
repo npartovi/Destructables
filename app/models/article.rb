@@ -1,3 +1,19 @@
+# == Schema Information
+#
+# Table name: articles
+#
+#  id                   :integer          not null, primary key
+#  title                :string           not null
+#  body                 :string           not null
+#  user_id              :integer          not null
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  img_url_file_name    :string
+#  img_url_content_type :string
+#  img_url_file_size    :integer
+#  img_url_updated_at   :datetime
+#
+
 class Article < ApplicationRecord
 
 	validates :title, :body, presence: true
@@ -13,6 +29,10 @@ class Article < ApplicationRecord
 
 	has_many :comments,
 		class_name: 'Comment',
+		foreign_key: :article_id
+
+	has_many :steps,
+		class_name: 'Step',
 		foreign_key: :article_id
 
 

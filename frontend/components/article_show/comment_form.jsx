@@ -37,7 +37,9 @@ class CommentForm extends React.Component {
 					</div>
 					<form onSubmit={() => this.commentSubmitHandler()} className="comments-form">
 						<textarea className="comment_input" rows="10" className="comment-input" onChange={this.update('body')} value={this.state.body} />
-						<button type="submit">Post Comment </button>
+						<div className="submit-button-comment">
+							<button type="submit">Post Comment </button>
+						</div>
 					</form>
 				</div>
 			)
@@ -49,14 +51,18 @@ class CommentForm extends React.Component {
 	renderComments(){
 
     	const comments = Object.values(this.props.comments);
-
 	    if (comments && comments.length > 0) {
 	      const renderedComments = comments.map( (comment, idx) => {
 	        return (
 	          <li key={idx} className="comment-list-item">
-	            <p className="comment-list-item-body">
-	              {comment.body}
-	            </p>
+	          	<div className="comments-show-header">
+	          		<img src={comment.profileImg} />
+	          		<div className="comment-header-content">
+	          			<h3 className="comment-username">{comment.userName}</h3>
+	          			<p className="comment-date">{new Date(comment.createdAt).toDateString()}</p>
+	          		</div>
+	          	</div>
+	              <p className ="comment-body-text">{comment.body}</p>
 	          </li>
 	        )
 	      })
@@ -70,12 +76,15 @@ class CommentForm extends React.Component {
 	    }
 	}
 
+
 	render(){
 
 		return(
 			<div className="comments-container">
-				<h1> Comments </h1>
 				{this.commentForm()}
+				<div className="comment-title-header">
+					<h1> Comments </h1>
+				</div>
 				{this.renderComments()}
 			</div>
 		)

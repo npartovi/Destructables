@@ -1,15 +1,21 @@
 import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
+import StepForm from '../steps/step_form';
 
 class ArticleForm extends React.Component {
 	constructor(props){
 		super(props);
 
+		this.emptyStep = {}
+
 		this.state = {
 			article: {
 				title:""
 			},
-			steps: [],
+			steps: [{
+				title: "",
+				body: ""
+			}],
 			modalOpen: true,
 			renderForm: false,
 			coverImage: {imageFile: null, imageUrl: null}
@@ -104,6 +110,7 @@ class ArticleForm extends React.Component {
 	}
 
 
+
 	render(){
 
 		console.log(this.state)
@@ -129,6 +136,10 @@ class ArticleForm extends React.Component {
 						</div>
 
 					</nav>
+				</div>
+
+				<div>
+					<StepForm />
 				</div>
 				
 			</div>
