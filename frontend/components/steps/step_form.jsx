@@ -7,7 +7,9 @@ class StepForm extends React.Component {
 
 		this.state = {
 			title: "",
-			body: ""
+			body: "",
+			ord: " ",
+			article: this.props.articleId,
 		}
 
 
@@ -18,25 +20,17 @@ class StepForm extends React.Component {
 		return (e) => {
 			this.setState({[field]: e.target.value})
 		};
-		
 	}
 
-	stepSubmitHandler(){
-		if(this.state.body && this.state.title !== ""){
-			
-
-		}
-	}
-
-
+	
 
 	render(){
 		console.log(this.state)
 		return(
-			<form>
+			<form onSubmit={this.stepSubmitHandler}>
 				<input onChange={this.update('title')} type="text" placeholder="Plese enter text for step" />
 				<textarea onChange={this.update('body')} ></textarea>
-				<button>submit</button>
+				<button type="submit">submit</button>
 			</form>
 		)
 	}

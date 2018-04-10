@@ -2,19 +2,17 @@ import { connect } from 'react-redux';
 import StepForm from './steps_container';
 import { createStep } from '../../actions/step_action';
 
-const mapStateToProps = (state) => ({
-	steps: state.entities.steps
-
+const mapStateToProps = (state, ownProps) => ({
+	steps: state.entities.steps,
+	articleId: ownProps.articleId
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	createStep: (step,articleId) => dispatch(createStep(step, articleId))
-
-
+	createStep: (step) => dispatch(createStep(step))
 });
 
 
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(StepForm)
+)(StepForm);

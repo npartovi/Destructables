@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SimpleSlider from '../slideshow/slide_show';
-import SearchBarContainer from '../searchbar/search_bar_container';
 import UserDropDown from './user_dropdown_menu';
 
 
@@ -44,9 +43,6 @@ class SessionButtons extends React.Component {
 						<h1>Destructables!</h1>
 					</header>
 				</Link>
-
-
-				<SearchBarContainer />
 
 				<button className="nav-bar-create-article-button">
 					<Link to="/articles/new">Create New Article</Link>

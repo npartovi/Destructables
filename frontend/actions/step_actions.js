@@ -6,16 +6,25 @@ export default const RECEIVE_STEP = "RECEIVE_STEP";
 
 
 
-export const fetchSteps = (articleId) => (dispatch) => (
+export const fetchAllSteps = (articleId) => (dispatch) => (
 	StepApiUtil.fetchSteps(articleId)
 		.then(steps => dispatch(receiveAllSteps(steps)))
 
 );
 
-export const createStep = (articleId) => (dispatch) => (
-	StepApiUtil.createStep(articleId)
-		.then(step => receiveStep(step))
+
+export const fetchStep = stepId => dispatch => (
+  StepApiUtil.fetchStep(stepId)
+  		.then(step => dispatch(receiveStep(step)))
+  
 );
+
+
+export const createStep = step => dispatch => (
+  StepsApiUtil.createStep(step)
+  		.then( step => dispatch(receiveStep(step)),
+);
+
 
 
 

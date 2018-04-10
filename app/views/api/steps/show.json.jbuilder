@@ -1,0 +1,1 @@
+json.extract! @step, :id, :title, :body, :ord, :article_id

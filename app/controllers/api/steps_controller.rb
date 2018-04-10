@@ -6,15 +6,28 @@ class Api::StepsController < ApplicationController
 
 	def create
 		@step = Step.new(step_params)
-		@step.article_id = params[:article_id]
-		@step.save!
+
+		if @step.save
+			render :show
+		else
+			render json: @step.errors.full_messages, status: 422
+		end
 	end
+
+	def show
+    	@step = Step.find(params[:id])
+  	end
+
+  	def destroy
+    	@step = Step.find(params[:id])
+    	@step.destroy
+  	end
 
 
 	private
 
 	def step_params
-		params.require(:step).permit(:title, :body)
+		params.require(:step).permit(:title, :body, :ord, :article_id)
 	end
 
 	

@@ -6,10 +6,19 @@ export const fetchSteps =(articleId) => (
 
 );
 
-export const createSteps = (step, articleId) => (
-	$.ajax({
-		url: `api/articles/${articleId}/steps`,
-		method: "POST",
-		data: { step }
-	});
+
+export const fetchStep = id => (
+  $.ajax({
+    method: "GET",
+    url: `/api/steps/${id}`,
+  })
+);
+
+
+export const createStep = step => (
+  $.ajax({
+    method: "POST",
+    url: "/api/steps",
+    data: {step}
+  })
 );

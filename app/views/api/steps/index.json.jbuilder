@@ -1,6 +1,10 @@
-json.steps @steps.each do |step|
-	json.title step.title
-	json.body step.body
-	json.ord step.ord
-	json.articleId step.article_id
+
+
+
+@steps.each do |step|
+  json.steps do
+    json.set! step.id do
+      json.extract! step, :title, :body, :ord, :article_id
+    end
+  end
 end
