@@ -14,7 +14,9 @@ class ArticleForm extends React.Component {
 			},
 			steps: [{
 				title: "",
-				body: ""
+				body: "",
+				imageFile: null,
+				imageUrl: null
 			}],
 			modalOpen: true,
 			renderForm: false,
@@ -26,6 +28,7 @@ class ArticleForm extends React.Component {
 		this.renderHeaderImagePreview = this.renderHeaderImagePreview.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.addStep = this.addStep.bind(this);
+		this.updateStepFile = this.updateStepFile.bind(this);
 	}
 
 
@@ -41,6 +44,32 @@ class ArticleForm extends React.Component {
 	     if (file) {
 	      fileReader.readAsDataURL(file);
 	    }
+
+	}
+
+
+	updateStepFile(idx){
+
+		return (e) => {
+
+
+			const file = e.currentTarget.files[0];
+			const fileReader = new FileReader();
+			let { steps } = this.state;
+
+
+		    fileReader.onloadend = () =>{
+		    	steps[idx].imageFile = file
+		    	steps[idx].imageUrl = fileReader.result;
+		    	this.setState({steps});
+		    	
+		    }
+
+		     if (file) {
+		      fileReader.readAsDataURL(file);
+		    }
+		}
+
 	}
 
 	handleSubmit(e){
@@ -53,9 +82,15 @@ class ArticleForm extends React.Component {
 
 		this.props.createArticle(formData).then((response) => {
 			this.state.steps.forEach((step,idx) =>{
+				const stepData = new FormData();
 				step.article_id = response.payload.article.id;
 				step.ord = idx + 1;
-				this.props.createStep(step);
+				stepData.append('step[title]', step.title);
+				stepData.append('step[body]', step.body);
+				stepData.append('step[step_img]', step.imageFile);
+				stepData.append('step[article_id]', step.article_id);
+				stepData.append('step[ord]', step.ord);
+				this.props.createStep(stepData);
 			});
 		}).then(() => this.props.history.push("/"));
 	}
@@ -124,6 +159,32 @@ class ArticleForm extends React.Component {
 		}
 	}
 
+
+
+	renderStepImagePreview(idx){
+
+		if(this.state.steps[idx].imageUrl){
+			return(
+				<div className='step-image-attachment-container'>
+					<div className="step-image-attachment-wrapper">
+						<img className="step-image-attachment" src={`${this.state.steps[idx].imageUrl}`} />
+					</div>
+				</div>
+			)
+		}else {
+			return(
+				<form className="">
+					<div className="step-icon">
+						<i className="fa fa-plus plus-medium-icon " aria-hidden="true"></i>Click for Step Images
+					</div>
+					<input onChange={this.updateStepFile(idx)} type="file" />
+				</form>
+			)
+
+		}
+
+	}
+
 	addStep(){
 		const newSteps = this.state.steps
 		const newStep = {title: "", body: ""}
@@ -137,14 +198,10 @@ class ArticleForm extends React.Component {
 			<div>
 				<ul className="steps-list">
 				{ this.state.steps.map((step, idx) => (
-				<li className="steps-form-list">
+				<li key={idx} className="steps-form-list">
 					<div className="article-form-step-images">
-						<form className="">
-							<div className="step-icon">
-								<i className="fa fa-plus plus-medium-icon " aria-hidden="true"></i>Click for Step Images
-							</div>
-							<input type="file" />
-						</form>
+
+						{this.renderStepImagePreview(idx)}
 					</div>
 					<div className="article-steps-body">
 						<div className="step-form-container">

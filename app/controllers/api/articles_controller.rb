@@ -1,6 +1,7 @@
 class Api::ArticlesController < ApplicationController
 
 	def create
+		debugger
 		@article = Article.new(article_params)
 		@article.user_id = current_user.id
 

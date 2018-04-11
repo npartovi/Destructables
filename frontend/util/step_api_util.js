@@ -9,15 +9,21 @@ export const fetchSteps =(articleId) => (
 export const fetchStep = id => (
   $.ajax({
     method: "GET",
-    url: `/api/steps/${id}`,
+    url: `api/steps/${id}`,
   })
 );
 
 
 export const createStep = step => (
+
+
   $.ajax({
     method: "POST",
-    url: "/api/steps",
-    data: { step }
+    url: "api/steps",
+    processData: false,
+    contentType: false,
+    dataType: 'json',
+    data: step
   })
+
 );

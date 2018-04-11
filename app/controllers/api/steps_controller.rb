@@ -5,6 +5,7 @@ class Api::StepsController < ApplicationController
 	end
 
 	def create
+
 		@step = Step.new(step_params)
 
 		if @step.save
@@ -27,7 +28,8 @@ class Api::StepsController < ApplicationController
 	private
 
 	def step_params
-		params.require(:step).permit(:title, :body, :ord, :article_id)
+		debugger
+		params.require(:step).permit(:title, :body, :ord, :article_id, :step_img)
 	end
 
 	

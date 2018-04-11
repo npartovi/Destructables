@@ -8,6 +8,7 @@ class ArticleShow extends React.Component {
 
 	componentDidMount(){
 		this.props.fetchArticle(this.props.match.params.articleId);
+		this.props.fetchAllSteps(this.props.match.params.articleId);
 	}
 
 
@@ -31,14 +32,29 @@ class ArticleShow extends React.Component {
 		}
 	}
 
+	renderStepsPage(){
+		if(this.props.steps){
+			return(
+				Object.values(this.props.steps).map(step => (
+					<div>
+						<h1>{step.title}</h1>
+						<p>{step.body}</p>
+						<img src={step.stepImg} />
+					</div>
+				))
+			)
+		}else {
+			return null
+		}
+	}
 
 	renderHeaderShow(){
 		if(this.props.article){
 			return(
 				<div className="show-page-container">
 					<div className="show-page-header-information">
-						<img src={this.props.article.imgUrl} />
 						<h1>{this.props.article.title}</h1>
+						<img src={this.props.article.imgUrl} />
 					</div>
 				</div>
 			)
@@ -49,10 +65,14 @@ class ArticleShow extends React.Component {
 
 	render(){
 
+		console.log(this.props.steps)
+		
+
 		return(
 			<div className="show-page-wrapper">
-			{this.renderHeaderShow()}
-			{this.renderCommentsAndForm()}
+				{this.renderHeaderShow()}
+				{this.renderStepsPage()}
+				{this.renderCommentsAndForm()}
 			</div>
 		)
 	}

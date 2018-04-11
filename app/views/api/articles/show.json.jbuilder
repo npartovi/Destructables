@@ -26,7 +26,7 @@ end
 json.set! :steps do 
 	@article.steps.each do |step|
 		json.set! step.id do 
-			json.extract! step, :id, :title, :body, :ord, :article_id
+			json.extract! step, :id, :title, :body, :ord, :article_id, :step_img
 		end
 	end
 end
