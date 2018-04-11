@@ -33,13 +33,17 @@ class ArticleShow extends React.Component {
 	}
 
 	renderStepsPage(){
+
 		if(this.props.steps){
+			debugger
 			return(
-				Object.values(this.props.steps).map(step => (
-					<div>
-						<h1>{step.title}</h1>
-						<p>{step.body}</p>
-						<img src={step.stepImg} />
+				Object.values(this.props.steps).map((step,idx) => (
+					<div className="step-show-container">
+						<h1 className="step-show-header">Step{idx + 1} : {step.title}</h1>
+						<img className="step-show-img" src={step.stepImg} />
+						<div className ="step-show-body">
+							<p>{step.body}</p>
+						</div>
 					</div>
 				))
 			)
@@ -51,12 +55,12 @@ class ArticleShow extends React.Component {
 	renderHeaderShow(){
 		if(this.props.article){
 			return(
-				<div className="show-page-container">
+				
 					<div className="show-page-header-information">
 						<h1>{this.props.article.title}</h1>
 						<img src={this.props.article.imgUrl} />
 					</div>
-				</div>
+				
 			)
 		} else {
 			return null
@@ -69,11 +73,13 @@ class ArticleShow extends React.Component {
 		
 
 		return(
+		<div className="show-page-container">
 			<div className="show-page-wrapper">
 				{this.renderHeaderShow()}
 				{this.renderStepsPage()}
 				{this.renderCommentsAndForm()}
 			</div>
+		</div>
 		)
 	}
 

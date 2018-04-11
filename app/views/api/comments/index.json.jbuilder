@@ -1,5 +1,5 @@
-json.comments @comments.each do |comment|
-  json.body comment.body
-  json.profileImg  asset_path(comment.user.profile_img.url)
-  json.userName comment.user.username
+@comments.each do |comment|
+	json.set! comment.id do
+	  json.partial! "api/comments/comment", comment: comment
+	end
 end

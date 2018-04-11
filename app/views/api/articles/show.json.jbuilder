@@ -15,9 +15,7 @@ end
 json.set! :comments do 
 	@article.comments.each do |comment|
 		json.set! comment.id do  
-			json.extract! comment, :id, :user_id, :body, :article_id, :created_at
-			json.user_name comment.user.username
-			json.profileImg asset_path(comment.user.profile_img.url)
+			json.partial! "api/comments/comment", comment: comment
 		end 
 	end
 end

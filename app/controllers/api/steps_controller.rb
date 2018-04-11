@@ -28,7 +28,6 @@ class Api::StepsController < ApplicationController
 	private
 
 	def step_params
-		debugger
 		params.require(:step).permit(:title, :body, :ord, :article_id, :step_img)
 	end
 

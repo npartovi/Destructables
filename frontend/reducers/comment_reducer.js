@@ -7,7 +7,7 @@ const CommentReducer = (state = {}, action) => {
 	Object.freeze(state);
 	switch(action.type){
 		case RECEIVE_ALL_COMMENTS:
-			return Object.assign({}, state, action.comments.comments);
+			return Object.assign({}, state, action.comments);
 		case RECEIVE_ARTICLE:
 			const newState = action.payload.comments;
 			return Object.assign({}, newState);

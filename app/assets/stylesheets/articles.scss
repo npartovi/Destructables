@@ -6,11 +6,49 @@
 .show-page-container {
     margin: 0 auto;
     width: 1200px;
-    text-align: center
+    text-align: center;
+    margin-top: 30px;
 }
 
 .show-page-container img {
-    width: 500px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+h1.step-show-header {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.show-page-header-information img {
+    margin-top: 15px;
+}
+
+.step-show-body {
+	max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .step-show-body {
+ 	font-size: 20px;
+    line-height: 32px;
+    font-family: helvetica,arial,sans-serif;
+    font-weight: 300;
+    text-align: left;
+    color: #555;
+    word-wrap: break-word;
     margin-top: 30px;
+ }
+
+ .step-show-body p {
+ 	margin: 3px 0 20px;
+ }
+
+ .step-show-container {
+    margin-top: 70px;
 }
 
