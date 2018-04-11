@@ -5,6 +5,13 @@ class Api::ArticlesController < ApplicationController
 		@article.user_id = current_user.id
 
 		if @article.save!
+			# debugger
+			# params[:step].each_with_index do |step,idx|
+			# 	step.article_id = @article.id
+			# 	step.ord = idx + 1
+			# 	step.save!
+			# end
+
 			render :show
 		else
 			render json: @article.errors.full_messages

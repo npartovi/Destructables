@@ -3,8 +3,8 @@ export const RECEIVE_ALL_ARTICLES = "RECEIVE_ALL_ARTICLES";
 export const RECEIVE_ARTICLE = "RECEIVE_ARTICLE";
 
 
-export const createArticle = (article) => (dispatch) => (
-	ArticleApiUtil.createArticle(article)
+export const createArticle = (article, steps) => (dispatch) => (
+	ArticleApiUtil.createArticle(article, steps)
 		.then(article => dispatch(receiveArticle(article)))
 );
 

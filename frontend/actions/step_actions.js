@@ -1,8 +1,8 @@
 import * as StepApiUtil from '../util/step_api_util';
 
 
-export default const RECEIVE_ALL_STEPS = "RECEIVE_ALL_STEPS";
-export default const RECEIVE_STEP = "RECEIVE_STEP";
+export const RECEIVE_ALL_STEPS = "RECEIVE_ALL_STEPS";
+export const RECEIVE_STEP = "RECEIVE_STEP";
 
 
 
@@ -21,19 +21,19 @@ export const fetchStep = stepId => dispatch => (
 
 
 export const createStep = step => dispatch => (
-  StepsApiUtil.createStep(step)
-  		.then( step => dispatch(receiveStep(step)),
+  StepApiUtil.createStep(step)
+  		.then( step => dispatch(receiveStep(step)))
 );
 
 
 
 
-const receiveAllSteps = ({
+const receiveAllSteps = (steps) => ({
 	type: RECEIVE_ALL_STEPS,
 	steps
 });
 
-const receiveStep = ({
+const receiveStep = (step) => ({
 	type: RECEIVE_STEP,
 	step
 });

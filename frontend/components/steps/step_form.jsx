@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+
 class StepForm extends React.Component {
 	constructor(props){
 		super(props);
@@ -9,9 +10,8 @@ class StepForm extends React.Component {
 			title: "",
 			body: "",
 			ord: " ",
-			article: this.props.articleId,
+			article: " ",
 		}
-
 
 		this.update = this.update.bind(this);
 	}
@@ -22,10 +22,13 @@ class StepForm extends React.Component {
 		};
 	}
 
-	
+	stepSubmitHandler(){
+		this.props.createStep(this.state).then(() => this.props.history.push("/"))
+	}
+
+
 
 	render(){
-		console.log(this.state)
 		return(
 			<form onSubmit={this.stepSubmitHandler}>
 				<input onChange={this.update('title')} type="text" placeholder="Plese enter text for step" />

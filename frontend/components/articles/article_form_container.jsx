@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import ArticleForm from './article_form';
 import { createArticle } from '../../actions/article_actions';
 import { withRouter } from 'react-router-dom';
+import { createStep } from '../../actions/step_actions';
 
 
 
@@ -10,7 +11,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	createArticle: (article) => dispatch(createArticle(article))
+	createArticle: (article) => dispatch(createArticle(article)),
+	createStep: (step) => dispatch(createStep(step))
 });
 
 export default withRouter(connect(

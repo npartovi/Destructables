@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Link, withRouter } from 'react-router-dom';
-import StepForm from '../steps/step_form';
+// import StepForm from '../steps/step_form';
 
 class ArticleForm extends React.Component {
 	constructor(props){
@@ -25,6 +25,7 @@ class ArticleForm extends React.Component {
 		this.updateFile = this.updateFile.bind(this);
 		this.renderHeaderImagePreview = this.renderHeaderImagePreview.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.addStep = this.addStep.bind(this);
 	}
 
 
@@ -50,12 +51,26 @@ class ArticleForm extends React.Component {
 		formData.append("article[body]","text");
 
 
-		this.props.createArticle(formData).then(() => this.props.history.push("/"));
+		this.props.createArticle(formData).then((response) => {
+			this.state.steps.forEach((step,idx) =>{
+				step.article_id = response.payload.article.id;
+				step.ord = idx + 1;
+				this.props.createStep(step);
+			});
+		}).then(() => this.props.history.push("/"));
 	}
 
 	update(field){
 		return (e) => {
 			this.setState({article: {[field]: e.target.value} });
+		}
+	}
+
+	updateStep(field, stepIdx){
+	return (e) => {
+		const newSteps = this.state.steps;
+		newSteps[stepIdx][field] = e.target.value;
+		this.setState({steps: newSteps});
 		}
 	}
 
@@ -109,6 +124,44 @@ class ArticleForm extends React.Component {
 		}
 	}
 
+	addStep(){
+		const newSteps = this.state.steps
+		const newStep = {title: "", body: ""}
+		newSteps.push(newStep);
+		this.setState({steps: newSteps})
+	}
+
+	renderSteps(){
+
+		return (
+			<div>
+				<ul className="steps-list">
+				{ this.state.steps.map((step, idx) => (
+				<li className="steps-form-list">
+					<div className="article-form-step-images">
+						<form className="">
+							<div className="step-icon">
+								<i className="fa fa-plus plus-medium-icon " aria-hidden="true"></i>Click for Step Images
+							</div>
+							<input type="file" />
+						</form>
+					</div>
+					<div className="article-steps-body">
+						<div className="step-form-container">
+							
+								<form className="step-form" onSubmit={this.stepSubmitHandler}>
+									<input className="step-form-title" onChange={this.updateStep('title', idx)} type="text" placeholder="Enter Step Title" />
+									<textarea className="step-form-body" onChange={this.updateStep('body',idx)} placeholder="Enter Step Information" ></textarea>
+								</form>
+						</div>
+					</div>
+				</li>
+				))}
+				</ul>
+			</div>
+		)
+	}
+
 
 
 	render(){
@@ -138,10 +191,11 @@ class ArticleForm extends React.Component {
 					</nav>
 				</div>
 
-				<div>
-					<StepForm />
+				{this.renderSteps()}
+
+				<div className="add-step-button">
+					<button className="add-button" onClick={this.addStep}>Add Step</button>
 				</div>
-				
 			</div>
 			
 		)

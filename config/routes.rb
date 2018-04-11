@@ -8,10 +8,9 @@ Rails.application.routes.draw do
   		resources :comments, only:[:create, :index]
       resources :steps, only: [:index]
   	end
+    resources :steps, except: [:new, :edit, :index]
+    resources :comments, only: [:destroy]
   end
-
-  resources :comments, only: [:destroy]
-  resources :steps, except: [:new, :edit, :index]
 
   root "static_pages#root"
 

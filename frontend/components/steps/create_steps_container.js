@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import StepForm from './steps_container';
 import { createStep } from '../../actions/step_action';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => ({
-	steps: state.entities.steps,
-	articleId: ownProps.articleId
+	
+
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -12,7 +13,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 
-export default connect(
+export default withRouter(connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(StepForm);
+)(StepForm));
