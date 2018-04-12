@@ -125,6 +125,19 @@ li.comment-list-item {
     width: 77%;
 }
 
+.delete-button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.delete-button button {
+    padding: 7px;
+    border-radius: 4px;
+    background: blue;
+    color: white;
+    font-size: 13px;
+}
+
 
 
 

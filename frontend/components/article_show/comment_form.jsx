@@ -24,7 +24,7 @@ class CommentForm extends React.Component {
 		if(this.props.currentUser && this.state.body !== ""){
 			const body = this.state;
 			this.setState({body:""});
-			this.props.createComment(body).then(() => this.props.fetchComments(this.props.articleId));
+			this.props.createComment(body);
 		}
 	}
 
@@ -48,6 +48,18 @@ class CommentForm extends React.Component {
 		}
 	}
 
+	renderDeleteCommentButton(comment){
+
+		if(!this.props.currentUser) return null
+		if(this.props.currentUser.id === comment.userId){
+			return(
+				<div className ="delete-button">
+					<button onClick={() => this.props.deleteComment(comment.id)}>delete me</button>
+				</div>
+				)
+		}
+	}
+
 	renderComments(){
 
     	const comments = Object.values(this.props.comments);
@@ -63,6 +75,9 @@ class CommentForm extends React.Component {
 	          		</div>
 	          	</div>
 	              <p className ="comment-body-text">{comment.body}</p>
+	              <div>
+	              	{this.renderDeleteCommentButton(comment)}
+	              </div>
 	          </li>
 	        )
 	      })

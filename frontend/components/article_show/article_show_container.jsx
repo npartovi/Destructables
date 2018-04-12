@@ -3,6 +3,7 @@ import ArticleShow from './article_show_page';
 import { fetchArticle } from '../../actions/article_actions';
 import { fetchComments, createComment, deleteComment } from '../../actions/comment_action';
 import { fetchAllSteps } from '../../actions/step_actions';
+import { withRouter } from 'react-router-dom';
 
 
 const mapStateToProps = (state,ownProps) => ({
@@ -23,4 +24,4 @@ const mapDispatchToprops = (dispatch) => ({
 export default connect (
 	mapStateToProps,
 	mapDispatchToprops
-)(ArticleShow);
+)(withRouter(ArticleShow));

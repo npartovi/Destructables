@@ -9,11 +9,20 @@ class Api::CommentsController < ApplicationController
 		@comment.user = current_user
 		@comment.article_id = params[:article_id]
 		@comment.save!
+
+		render :show
 	end
 
 	def destroy
-		@comment.find(params[:id])
+		@comment = Comment.find(params[:id])
 		@comment.destroy
+
+		render :show
+	end
+
+	def show
+		@comment = Comment.find(params[:id])
+		render :show
 	end
 
 
