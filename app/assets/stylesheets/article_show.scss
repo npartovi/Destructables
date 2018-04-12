@@ -8,3 +8,15 @@
     text-transform: uppercase;
 }
 
+.step-show-body p {
+    text-align: center;
+}
+
+a.article-index-item-title {
+    flex: 1;
+}
+
+.article-index-item-info {
+    display: flex;
+    flex-direction: column;
+}

@@ -22,7 +22,7 @@ export const fetchArticle = (id) => (dispatch) => (
 );
 
 export const searchDatabase = (query) => dispatch => (
-  SearchAPIUtil.search(query)
+  SearchApiUtil.search(query)
     .then( results => dispatch(receiveSearchResults(results)))
 );
 
@@ -38,13 +38,9 @@ const receiveArticle = (payload) => ({
 	payload
 });
 
-const receiveSearchResults = (searchResults) => ({
+const receiveSearchResults = (searches) => ({
     type: RECEIVE_SEARCH_RESULTS,
-    searchResults
-)};
+    searches
+});
 
 
-// export const searchProject = (query) => dispatch => {
-//   return ArticleAPIUtil.searchProject(query).then((projects) => {
-//     return dispatch(receiveProjects(projects))}
-// )};

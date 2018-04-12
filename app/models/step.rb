@@ -13,7 +13,7 @@
 
 class Step < ApplicationRecord
 
-	validates :title, :body, presence: true
+	validates :body, presence: true
 
 	has_attached_file :step_img, default_url: "missing.png"
   	validates_attachment_content_type :step_img, content_type: /\Aimage\/.*\Z/

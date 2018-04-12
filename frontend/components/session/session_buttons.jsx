@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SimpleSlider from '../slideshow/slide_show';
 import UserDropDown from './user_dropdown_menu';
-import SearchBar from '../searchbar/search_bar';
+import SearchBarContainer from '../searchbar/search_bar_container';
 
 
 class SessionButtons extends React.Component {
@@ -45,7 +45,7 @@ class SessionButtons extends React.Component {
 					</header>
 				</Link>
 
-				<SearchBar />
+				<SearchBarContainer />
 
 				<button className="nav-bar-create-article-button">
 					<Link to="/articles/new">Create New Article</Link>

@@ -5,12 +5,14 @@ Rails.application.routes.draw do
   	resources :users, only: [:create, :show, :index]
   	resource :session, only: [:create, :destroy]
   	resources :articles, only: [:show, :index, :create] do
+      resource :favorite, only: [:create,:destroy]
   		resources :comments, only:[:create, :index]
       resources :steps, only: [:index]
   	end
     resources :steps, except: [:new, :edit, :index]
     resources :comments, only: [:destroy]
     resources :searches, only: [:index]
+
   end
 
   root "static_pages#root"

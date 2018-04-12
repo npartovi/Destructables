@@ -1,11 +1,15 @@
 li.article-index-item {
 	margin: 15px 12px;
     width: 305px;
-    border: 1px solid rgba(0,0,0,0.1);
+    background: #fff;
+     border: 1px solid rgba(0, 0, 0, 0.10);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.15);
 }
+
+
 
 .article-index-link img {
 	min-width: 100%;
@@ -28,7 +32,7 @@ li.article-index-item {
 }
 
 .article-index-item-title {
-	font-size: 16px;
+	font-size: 14px;
     font-weight: bold;
     line-height: 20px;
     color: #333;
@@ -45,3 +49,17 @@ li.article-index-item {
     justify-content: center;
 	
 }
+
+.Main {
+    background: #f6f6f6;
+}
+
+.article-user p {
+    color: #555;
+}
+
+span.article-index-user {
+    color: black;
+}
+
+

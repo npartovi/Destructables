@@ -35,7 +35,6 @@ class ArticleShow extends React.Component {
 	renderStepsPage(){
 
 		if(this.props.steps){
-			debugger
 			return(
 				Object.values(this.props.steps).map((step,idx) => (
 					<div className="step-show-container">

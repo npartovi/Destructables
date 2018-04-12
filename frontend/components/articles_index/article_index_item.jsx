@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const ArticleIndexItem = ({ title, imgUrl, article}) => (
-
+const ArticleIndexItem = ({ title, imgUrl, article, username}) => (
 
 	<li className="article-index-item">
 		<Link className="article-index-link" to={`/articles/${article.id}`} >
@@ -14,10 +13,10 @@ const ArticleIndexItem = ({ title, imgUrl, article}) => (
 			<Link className="article-index-item-title" to={`/articles/${article.id}`} >
 				{title}
 			</Link>
+			<div className="article-user">
+				<p>by <span className="article-index-user">{ username }</span></p>
+			</div>
 		</div>
-
-
-		
 	</li>
 
 )

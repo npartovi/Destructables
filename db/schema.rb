@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180411230707) do
+ActiveRecord::Schema.define(version: 20180412181553) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,8 +36,16 @@ ActiveRecord::Schema.define(version: 20180411230707) do
     t.index ["user_id", "article_id"], name: "index_comments_on_user_id_and_article_id"
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id", "article_id"], name: "index_favorites_on_user_id_and_article_id", unique: true
+  end
+
   create_table "steps", force: :cascade do |t|
-    t.string "title", null: false
+    t.string "title"
     t.string "body", null: false
     t.integer "ord", null: false
     t.integer "article_id", null: false

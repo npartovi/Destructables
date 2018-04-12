@@ -20,11 +20,14 @@ class ArticleIndex extends React.Component {
 						title={article.title}
 						article={article}
 						imgUrl={article.imgUrl}
+						username={article.userName}
 
 					/>
 				))
 		)
 	}
+
+
 	render(){
 		if(this.props.articles.length === 0){
 			return null
