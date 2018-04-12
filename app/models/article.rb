@@ -16,7 +16,7 @@
 
 class Article < ApplicationRecord
 
-	validates :title, :body, presence: true
+	validates :title, presence: true
 	validates :title, uniqueness: true
 	
 	has_attached_file :img_url, default_url: "https://s3-us-west-1.amazonaws.com/destructabledev/articles/img_urls/000/000/012/original/missing.png"
@@ -35,10 +35,11 @@ class Article < ApplicationRecord
 		class_name: 'Step',
 		foreign_key: :article_id
 
+	def self.top_five_search(query_param)
+    	param = '%' + query_param.downcase + '%'
+    	Article.where('lower(title) LIKE ?', param).limit(5)
+  	end
 
-	def ensure_body_text
-		self.body ||= "test"
-	end
 
 	
 end

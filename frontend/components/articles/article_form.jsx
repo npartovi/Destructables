@@ -77,7 +77,6 @@ class ArticleForm extends React.Component {
 		const formData = new FormData();
 		formData.append("article[title]", this.state.article.title);
 		formData.append("article[img_url]",this.state.coverImage.imageFile);
-		formData.append("article[body]","text");
 
 
 		this.props.createArticle(formData).then((response) => {

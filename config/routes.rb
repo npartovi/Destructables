@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   	end
     resources :steps, except: [:new, :edit, :index]
     resources :comments, only: [:destroy]
+    resources :searches, only: [:index]
   end
 
   root "static_pages#root"
