@@ -7,7 +7,7 @@ class ArticleShow extends React.Component {
 		super(props);
 
 		this.renderDeleteArticle = this.renderDeleteArticle.bind(this);
-		this.deleteSubmitHandler = this.deleteSubmitHandler.bind(this);
+		this.deleteArticleShowHandler = this.deleteArticleShowHandler.bind(this);
 	}
 
 	componentDidMount(){
@@ -61,15 +61,15 @@ class ArticleShow extends React.Component {
 	renderDeleteArticle(){
 		if(this.props.currentUser.id === this.props.article.userId){
 			return(
-				<button className="delete-article-show" onClick={this.deleteSubmitHandler(this.props.article.id)} >Delete Article</button>
+				<button className="delete-article-show" onClick={(e) => this.deleteArticleShowHandler(e, this.props.article.id)} >Delete Article</button>
 				)
 		}else{
 			return null
 		}
 	}
 
-	deleteSubmitHandler(articleId){
-		debugger
+	deleteArticleShowHandler(e, articleId){
+		e.preventDefault()
 		this.props.deleteArticle(articleId).then(() => this.props.history.push("/"))
 
 	}

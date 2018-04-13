@@ -7,7 +7,8 @@ import { createStep } from '../../actions/step_actions';
 
 
 const mapStateToProps = (state, ownProps) => ({
-	currentUser: state.sessions.currentUser
+	currentUser: state.sessions.currentUser, 
+	
 });
 
 const mapDispatchToProps = (dispatch) => ({

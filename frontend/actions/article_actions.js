@@ -25,7 +25,7 @@ export const fetchArticle = (id) => (dispatch) => (
 
 export const deleteArticle = (articleId) => (dispatch) => (
 	ArticleApiUtil.deleteArticle(articleId)
-		.then(article => dispatch(deleteArticle(article)))
+		.then(article => dispatch(removeArticle(article)))
 );
 
 export const searchDatabase = (query) => dispatch => (
