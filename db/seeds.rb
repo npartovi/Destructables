@@ -128,6 +128,62 @@ step9 = Step.create!({ title: "", body: "Disengage the the three plastic clips t
 step10 = Step.create!({ title: "", body: "Flip the circuit board over revealing the device screen. Remove the two screws connecting the screen and the circuit board.", ord: 10, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/auCgtEsx5KlNJjje" })
 step11 = Step.create!({ title: "", body: "Desolder each surface mount joint and remove the screen from the circuit board.", ord: 11, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/eWgXrdgNQYgqmRie" })
 
+article7 = Article.create!({ title: "Nintendo GameCub Controller Teardown", img_url: "https://s.aolcdn.com/hss/storage/midas/d1ed0e8e97fb894954e426e7181b5efd/200991522/smash1.jpg", user_id: user3.id})
+
+step1 = Step.create!({ title: "Separating the Separate Halves:", body: "Remove the six phillips head screws from the underside of the controller.", ord: 1, article_id: articl6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/GxTYtsNGoWEDOERX.huge" })
+step2 = Step.create!({ title: "", body: "After these screws are removed, you can separate the bottom from the top of the controller.", ord: 2, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/iGWbRO5f4pWPH5xZ" })
+step3 = Step.create!({ title: "Removing the Control Panel and Buttons:", body: "After removing the back of the controller, you can lift the circuit board out of the plastic shell.", ord: 3, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/4WyPtxYLqb2hn35p" })
+step4 = Step.create!({ title: "", body: "With the circuit board removed, you can access the main buttons and remove them if desired.", ord: 4, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/OQBpDwMRLKlM1rrn" })
+step5 = Step.create!({ title: "Removing the Remotes Bumpers:", body: "To remove the left and right bumpers from the bottom of the controller, pull up on the square base that keeps the button in place and then pull the button through the shell.", ord: 5, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/4vuqNqpWGJ3EPAxY" })
+step6 = Step.create!({ title: "Pieces of the Controller:", body: "These are the parts that should come out of the remote; not regarding the control panel.", ord: 6, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/qGyBaxelDBTQFuDB" })
+step7 = Step.create!({ title: "Removing the C-Stick:", body: "Once the control panel is removed from the controller the c-stick can be easily, but carefully, removed.", ord: 7, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/HxxTK5ZZeiW1YNue" })
+
+
+
+article8 = Article.create!({ title: "Optoma HD20 Focal Lens Replacement", img_url: "https://d3nevzfk7ii3be.cloudfront.net/igi/LpMaetIENWQWBs5X", user_id: user2.id})
+
+
+step1 = Step.create!({ title: "Cover", body: "Twist focal cap clockwise until it is fully extended.", ord: 1, article_id: article8.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/WIVqHR2XosajwRLT" })
+step2 = Step.create!({ title: "", body: "Remove focal cap by pulling it straight out.", ord: 2, article_id: article8.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/TmhchmScJTlA2pt5" })
+step3 = Step.create!({ title: "", body: "Use a Phillips #1 screwdriver to remove the three 7.5mm screws on the bottom of the device.", ord: 3, article_id: article8.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/wWE2cCrMiObJdQ4l" })
+step4 = Step.create!({ title: "", body: "Use a plastic opening tool to gently pry the top cover off of the device.", ord: 4, article_id: article8.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/DCYmASOdC2krhjVQ" })
+step5 = Step.create!({ title: "", body: "Remove the ribbon by disconnecting it from the main circuit board.Lift up the clip holding it down and pull the ribbon out.", ord: 5, article_id: article8.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/AHZREYIPE1qwRGKX" })
+step6 = Step.create!({ title: "Focal Lens", body: "Use a Phillips #1 screwdriver to unscrew the small black 2 mm screw on the side of the focal lens.", ord: 6, article_id: article8.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/3WbMEryYlD64XSLd" })
+step7 = Step.create!({ title: "", body: "Remove the focal lens by twisting it clockwise until it comes off.", ord: 7, article_id: article8.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/FA1JNkS4sMTOrgN6" })
+
+
+article9 = Article.create!({ title: "Actiontec Q1000 Teardown", img_url: "https://i.ebayimg.com/images/g/YFkAAOSwb79aSLBt/s-l300.jpg", user_id: user4.id})
+
+
+step1 = Step.create!({ title: "", body: "The Qwest Q1000 modem, made by Actiontec.Port side with antennas detached.DSL and Phone in ports4 Ethernet portsUSB port, reset button, and power jackNot a screw in sight.", ord: 1, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/D4pSCASWIsZXNemR" })
+step1 = Step.create!({ title: "", body: "As usual, the rubber feet are hiding screws!", ord: 2, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/2hZfaAL35sjyfmit" })
+step1 = Step.create!({ title: "", body: "Remove the 2 antenna wires from the wifi card. One is also taped to the back of the board.", ord: 3, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/cMHjoOEPP1mxT2Js" })
+step1 = Step.create!({ title: "", body: "The circuit board is finally free!", ord: 4, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/2OkfahwM1uIoe4eA" })
+step1 = Step.create!({ title: "", body: "Looks like someone was generous with the thermal paste.Underneath the cover:Broadcom BCM6366Broadcom BCM53115", ord: 5, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/SLe2CRkWmnMIxlfO" })
+step1 = Step.create!({ title: "", body: "The Wi-Fi card lets down its shield...The chip is a BCM4322.", ord: 6, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/VZeR6qyZHMsiUZ4G" })
+step1 = Step.create!({ title: "", body: "The inside of the top case. The antenna connectors are screwed onto the case.", ord: 7, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/J3L1aZtn1PpXUSfg" })
+step1 = Step.create!({ title: "", body: "The antenna connectors have gold-plated coax connectors and standard Wi-Fi antenna connectors.What's underneath the heat-shrink? A ferrite bead to minimize interference.", ord: 8, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/gJZYClXsuWgaIdhA" })
+step1 = Step.create!({ title: "", body: "Testing out the light pipe with an LED throwie...", ord: 9, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/hGfb2ON1wMUkWGMW" })
+step1 = Step.create!({ title: "", body: "The light pipe takes light from tiny surface-mount LEDS on the motherboard and refracts it to the panel.", ord: 10, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/wtwIHVkVhVE1PhTe" })
+step1 = Step.create!({ title: "", body: "The empty shell that once held a DSL modem. The 2 detachable Wi-Fi antennas. Nothing to tear down here!", ord: 11, article_id: article9.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/ZW4CBXPHaPoDDKXM" })
+
+article10 = Article.create!({ title: "How to clean and reapply thermal paste on ATI Radeon X1900 XTX", img_url: "http://img.hexus.net/v2/graphics_cards/ati/r580xtx_roundup/images/gecube/board-big.jpg", user_id: user5.id})
+
+step1 = Step.create!({ title: "", body: "Start by removing the card from the PC if you haven't already.", ord: 1, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/5POCHTLjckimPIhS" })
+step2 = Step.create!({ title: "", body: "The fan's power cable is located towards the bottom-left of the card. Disconnect the cable from the card.", ord: 2, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/rqpNAAhdF6c4yVTx" })
+step3 = Step.create!({ title: "", body: "Removing the heatsink from the card: The clamp is held on by four small Phillips screws. Remove them, then the clamp.", ord: 3, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/GQ1XqrIImUPXLhyX" })
+step4 = Step.create!({ title: "", body: "Remove the four phillips screws surrounding the clamp.", ord: 4, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/M5xxeREVmefBF3kB" })
+step5 = Step.create!({ title: "", body: "Seperate the heatsink and the card.", ord: 5, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/pNaG2xrO451XNySy" })
+step6 = Step.create!({ title: "", body: "Replacing Thermal Paste: Using a Q-tip/cotton swab and rubbing alcohol, clean the copper plate that protrudes from the bottom of the heatsink.", ord: 6, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/5DCbtO4xi5qb4XKA" })
+step7 = Step.create!({ title: "", body: "Removing the heatsink's plastic cover: Remove these Phillips screws.", ord: 7, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/2qd6jPKjXdArOq5k" })
+step8 = Step.create!({ title: "", body: "Seperate the plastic cover from the metal heat sink.", ord: 8, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/hHRd5oSmF2VrhFZL" })
+step9 = Step.create!({ title: "", body: "Cleaning dust out of the heat sink:", ord: 9, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/uJaqHSjYGv1Ohwu6" })
+step10 = Step.create!({ title: "", body: "Using a cotton swab/q-tip, clean the edges of the heat sink. You can also use canned air if available.", ord: 10, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/gjRDNXMKGPPDgFwn" })
+step11 = Step.create!({ title: "", body: "Using the same method that you used to clean the copper plate, clean the surface of the GPU die.", ord: 11, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/5bhIkLRNAEVqATQ5" })
+step12 = Step.create!({ title: "", body: "Re-Applying Thermal Paste: Apply a small glob of thermal paste to the corner of the die, (I recommend using Arctic Silver 5) and use an index card to spread a thin, even layer of it over the surface of the chip.", ord: 12, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/oc1oDZCFXrMIg5MH" })
+step13 = Step.create!({ title: "", body: "Wipe is around with scotch tape or a cloth", ord: 13, article_id: article10.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/MfHDlEew2IeGf4ZW" })
+
+
 
 
 
