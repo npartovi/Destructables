@@ -130,7 +130,7 @@ step11 = Step.create!({ title: "", body: "Desolder each surface mount joint and 
 
 article7 = Article.create!({ title: "Nintendo GameCub Controller Teardown", img_url: "https://s.aolcdn.com/hss/storage/midas/d1ed0e8e97fb894954e426e7181b5efd/200991522/smash1.jpg", user_id: user3.id})
 
-step1 = Step.create!({ title: "Separating the Separate Halves:", body: "Remove the six phillips head screws from the underside of the controller.", ord: 1, article_id: articl6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/GxTYtsNGoWEDOERX.huge" })
+step1 = Step.create!({ title: "Separating the Separate Halves:", body: "Remove the six phillips head screws from the underside of the controller.", ord: 1, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/GxTYtsNGoWEDOERX.huge" })
 step2 = Step.create!({ title: "", body: "After these screws are removed, you can separate the bottom from the top of the controller.", ord: 2, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/iGWbRO5f4pWPH5xZ" })
 step3 = Step.create!({ title: "Removing the Control Panel and Buttons:", body: "After removing the back of the controller, you can lift the circuit board out of the plastic shell.", ord: 3, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/4WyPtxYLqb2hn35p" })
 step4 = Step.create!({ title: "", body: "With the circuit board removed, you can access the main buttons and remove them if desired.", ord: 4, article_id: article7.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/OQBpDwMRLKlM1rrn" })
