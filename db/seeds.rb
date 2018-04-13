@@ -125,21 +125,9 @@ step6 = Step.create!({ title: "", body: "Grip the ribbon connector with your thu
 step7 = Step.create!({ title: "", body: "Remove the ten screws that connect the circuit board to the outer case.", ord: 7, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/WRJaAtntxDbS5mjj" })
 step8 = Step.create!({ title: "", body: "Remove the circuit board from the outer case using a plastic opening tool.", ord: 8, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/DCwnQnNmcDuYjill" })
 step9 = Step.create!({ title: "", body: "Disengage the the three plastic clips that secure the screen to the circuit board.", ord: 9, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/OptHtECKE6TNtXKi" })
-step10 = Step.create!({ title: "", body: "Flip the circuit board over revealing the device screen. Remove the two screws connecting the screen and the circuit board.", ord: 10, article_id: articl6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/auCgtEsx5KlNJjje" })
-step11 = Step.create!({ title: "", body: "Desolder each surface mount joint and remove the screen from the circuit board.", ord: 11, article_id: articl6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/eWgXrdgNQYgqmRie" })
+step10 = Step.create!({ title: "", body: "Flip the circuit board over revealing the device screen. Remove the two screws connecting the screen and the circuit board.", ord: 10, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/auCgtEsx5KlNJjje" })
+step11 = Step.create!({ title: "", body: "Desolder each surface mount joint and remove the screen from the circuit board.", ord: 11, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/eWgXrdgNQYgqmRie" })
 
-# article7 = Article.create!({ title: "Nintendo GameCub Controller Teardown", img_url: "https://s.aolcdn.com/hss/storage/midas/d1ed0e8e97fb894954e426e7181b5efd/200991522/smash1.jpg", user_id: user3.id})
 
-# # step1 = Step.create!({ title: "", body: "", ord: 12, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 13, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 14, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 15, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 16, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 17, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 18, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 19, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 20, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 21, article_id: articl6.id, step_img: "" })
-# # step1 = Step.create!({ title: "", body: "", ord: 26, article_id: articl6.id, step_img: "" })
 
 
