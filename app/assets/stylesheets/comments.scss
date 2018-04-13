@@ -157,6 +157,22 @@ li.search-item:hover {
     background: #ccc;
 }
 
+input.edit-text-submit {
+    background: black;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+textarea.edit-text-box {
+    height: 73px;
+    position: relative;
+    bottom: 40px;
+    width: 382px;
+    border: 2px solid #ccc;
+}
+
 
 
 

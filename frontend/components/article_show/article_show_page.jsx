@@ -1,9 +1,13 @@
 import React from 'react';
 import CommentForm from './comment_form';
+import { withRouter } from 'react-router-dom';
 
 class ArticleShow extends React.Component {
 	constructor(props){
 		super(props);
+
+		this.renderDeleteArticle = this.renderDeleteArticle.bind(this);
+		this.deleteSubmitHandler = this.deleteSubmitHandler.bind(this);
 	}
 
 	componentDidMount(){
@@ -53,12 +57,31 @@ class ArticleShow extends React.Component {
 		}
 	}
 
+
+	renderDeleteArticle(){
+		if(this.props.currentUser.id === this.props.article.userId){
+			return(
+				<button className="delete-article-show" onClick={this.deleteSubmitHandler(this.props.article.id)} >Delete Article</button>
+				)
+		}else{
+			return null
+		}
+	}
+
+	deleteSubmitHandler(articleId){
+		debugger
+		this.props.deleteArticle(articleId).then(() => this.props.history.push("/"))
+
+	}
+
 	renderHeaderShow(){
 		if(this.props.article){
 			return(
 				
 					<div className="show-page-header-information">
+						{this.renderDeleteArticle()}
 						<h1>{this.props.article.title}</h1>
+						<p>by: {this.props.article.username}</p>
 						<img src={this.props.article.imgUrl} />
 					</div>
 				
@@ -86,4 +109,4 @@ class ArticleShow extends React.Component {
 
 }
 
-export default ArticleShow
+export default withRouter(ArticleShow)

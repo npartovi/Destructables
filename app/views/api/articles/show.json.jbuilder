@@ -9,6 +9,8 @@ json.set! :article do
 	json.id @article.id
 	json.title @article.title
 	json.imgUrl asset_path(@article.img_url.url)
+	json.userId @article.user_id
+	json.username @article.user.username
 end
 
 json.set! :comments do 

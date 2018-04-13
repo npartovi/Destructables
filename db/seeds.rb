@@ -114,5 +114,32 @@ step15 = Step.create!({ title: "", body: "Note the digitizer cable coming throug
 step16 = Step.create!({ title: "", body: "If you are simply trying to replace a broken screen, you may stop here in this guide and reverse the steps to reassemble your Amazon Fire.", ord: 16, article_id: article5.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/2JeUYWxcvfWDCthu" })
 step17 = Step.create!({ title: "", body: "To remove the LCD panel, flip the device over and detach the LCD digitizer cable from the frame if they have become stuck together.You can use the iFixit Opening Tool to separate the LCD panel from the adhesive and it should come out of place with ease.", ord: 17, article_id: article5.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/FDCH21xfMUxrKFCJ" })
 
+article6 = Article.create!({ title: "Game Boy Screen Replacement", img_url: "https://d3nevzfk7ii3be.cloudfront.net/igi/YE6UHeNqDdSTGXSh", user_id: user6.id})
+
+step1 = Step.create!({ title: "Batteries", body: "Switch your Game Boy off and remove the cartridge.", ord: 1, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/MmfOfLnbQfKIIhwX.medium" })
+step2 = Step.create!({ title: "", body: "Use a fingernail (or small coin) to push down on the battery door latch and remove the battery door.", ord: 2, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/VORhCOESyk6DFbfy.medium" })
+step3 = Step.create!({ title: "", body: "Remove the six Triwing screws from the back of the device.", ord: 3, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/hAxpUIKQ1bkZKCBu.medium" })
+step4 = Step.create!({ title: "", body: "Gently separate the device's front casing from the back casing after you remove the screws.", ord: 4, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/VATiKKXmO6xPnIBQ.medium" })
+step5 = Step.create!({ title: "", body: "Slide the front side of the casing down to expose the ribbon cable connector.", ord: 5, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/K4hgYWEJAYoY5aBM.medium" })
+step6 = Step.create!({ title: "", body: "Grip the ribbon connector with your thumb and forefinger. Pull down gently until the connector, not the ribbon itself, comes out of its socket. Separate the front and back casings.", ord: 6, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/HMqDKftyxTOnfOrt.medium" })
+step7 = Step.create!({ title: "", body: "Remove the ten screws that connect the circuit board to the outer case.", ord: 7, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/WRJaAtntxDbS5mjj.medium" })
+step8 = Step.create!({ title: "", body: "Remove the circuit board from the outer case using a plastic opening tool.", ord: 8, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/DCwnQnNmcDuYjill.medium" })
+step9 = Step.create!({ title: "", body: "Disengage the the three plastic clips that secure the screen to the circuit board.", ord: 9, article_id: article6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/OptHtECKE6TNtXKi.medium" })
+step10 = Step.create!({ title: "", body: "Flip the circuit board over revealing the device screen. Remove the two screws connecting the screen and the circuit board.", ord: 10, article_id: articl6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/auCgtEsx5KlNJjje.medium" })
+step11 = Step.create!({ title: "", body: "Desolder each surface mount joint and remove the screen from the circuit board.", ord: 11, article_id: articl6.id, step_img: "https://d3nevzfk7ii3be.cloudfront.net/igi/eWgXrdgNQYgqmRie.medium" })
+
+article7 = Article.create!({ title: "", img_url: "", user_id: user3.id})
+
+# step1 = Step.create!({ title: "", body: "", ord: 12, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 13, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 14, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 15, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 16, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 17, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 18, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 19, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 20, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 21, article_id: articl6.id, step_img: "" })
+# step1 = Step.create!({ title: "", body: "", ord: 26, article_id: articl6.id, step_img: "" })
 
 

@@ -37,7 +37,7 @@ class CommentForm extends React.Component {
 
 	editSubmitHandler(id){
 			let comment = {comment: this.state.editBody, id: id}
-			this.props.updateComment(comment);
+			this.props.updateComment(comment).then(() => this.setState({editComment: null}));
 	}
 
 	commentForm(){
@@ -134,9 +134,6 @@ class CommentForm extends React.Component {
 
 
 	render(){
-
-		console.log(this.state)
-
 		return(
 			<div className="comments-container">
 				{this.commentForm()}

@@ -24,6 +24,15 @@ export const createArticle = (article) => (
 );
 
 
+export const deleteArticle = (articleId) => (
+	$.ajax({
+		url: `api/articles/${articleId}`,
+		method: "DELETE",
+	})
+
+)
+
+
 
 
 

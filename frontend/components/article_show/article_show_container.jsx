@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ArticleShow from './article_show_page';
-import { fetchArticle } from '../../actions/article_actions';
+import { fetchArticle, deleteArticle } from '../../actions/article_actions';
 import { fetchComments, createComment, deleteComment, updateComment } from '../../actions/comment_action';
 import { fetchAllSteps } from '../../actions/step_actions';
 import { withRouter } from 'react-router-dom';
@@ -19,7 +19,8 @@ const mapDispatchToprops = (dispatch) => ({
 	createComment: (comment) => dispatch(createComment(comment)),
 	deleteComment: (commentId) => dispatch(deleteComment(commentId)),
 	fetchAllSteps: (articleId) => dispatch(fetchAllSteps(articleId)),
-	updateComment: (comment) => dispatch(updateComment(comment))
+	updateComment: (comment) => dispatch(updateComment(comment)),
+	deleteArticle: (articleId) => dispatch(deleteArticle(articleId))
 });
 
 export default connect(

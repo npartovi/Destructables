@@ -29,3 +29,20 @@ a.article-index-item-title {
     position: relative;
     bottom: 30px;
 }
+
+button.delete-article-show {
+    padding: 6px 6px;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid red;
+    margin-bottom: 20px;
+}
+
+.show-page-header-information p {
+    font-size: 17px;
+    color: #3498db;
+    margin-top: 13px;
+    text-transform: capitalize;
+}
