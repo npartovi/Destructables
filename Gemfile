@@ -27,15 +27,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
-gem 'better_errors'
-gem 'binding_of_caller'
-gem 'pry-rails'
-gem 'annotate'
 gem 'jquery-rails'
 gem 'aws-sdk', '< 3.0'
 gem "paperclip", '~> 5.0.0'
 gem 'figaro'
-gem 'annotate'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -46,6 +42,9 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-rails'
+  gem 'byebug'
+  gem 'spring'
 end
 
 group :development do

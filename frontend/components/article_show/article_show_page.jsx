@@ -59,6 +59,10 @@ class ArticleShow extends React.Component {
 
 
 	renderDeleteArticle(){
+
+		if(!this.props.currentUser) return null
+
+
 		if(this.props.currentUser.id === this.props.article.userId){
 			return(
 				<button className="delete-article-show" onClick={(e) => this.deleteArticleShowHandler(e, this.props.article.id)} >Delete Article</button>
