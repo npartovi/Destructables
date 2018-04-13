@@ -5,9 +5,16 @@ class CommentForm extends React.Component {
 	constructor(props){
 		super(props);
 
-		this.state = { body: "", articleId: this.props.articleId};
+		this.state = { 
+			body: "", 
+			articleId: this.props.articleId,
+			editComment: null,
+			editBody: ""
+		};
+
 		this.update = this.update.bind(this);
 		this.commentSubmitHandler = this.commentSubmitHandler.bind(this);
+		this.editSubmitHandler = this.editSubmitHandler.bind(this);
 		this.renderComments = this.renderComments.bind(this);
 	}
 
@@ -26,6 +33,11 @@ class CommentForm extends React.Component {
 			this.setState({body:""});
 			this.props.createComment(body);
 		}
+	}
+
+	editSubmitHandler(id){
+			let comment = {comment: this.state.editBody, id: id}
+			this.props.updateComment(comment);
 	}
 
 	commentForm(){
@@ -48,13 +60,20 @@ class CommentForm extends React.Component {
 		}
 	}
 
+	setEditState(id){
+		this.setState({editComment: id})
+	}
+
+
+
 	renderDeleteCommentButton(comment){
 
 		if(!this.props.currentUser) return null
 		if(this.props.currentUser.id === comment.userId){
 			return(
-				<div className ="delete-button">
-					<button onClick={() => this.props.deleteComment(comment.id)}>delete me</button>
+				<div className ="logged_in_buttons">
+					<button className="delete-button" onClick={() => this.props.deleteComment(comment.id)}>Delete</button>
+					<button onClick={() => this.setEditState(comment.id)} className="edit-button">Edit</button>
 				</div>
 				)
 		}
@@ -62,9 +81,32 @@ class CommentForm extends React.Component {
 
 	renderComments(){
 
+
+
     	const comments = Object.values(this.props.comments);
 	    if (comments && comments.length > 0) {
 	      const renderedComments = comments.map( (comment, idx) => {
+	      	let editForm;
+
+	          		if (comment.id === this.state.editComment){
+	          			editForm =  (
+	          				<div>
+	          				<form className="" onSubmit={() => this.editSubmitHandler(comment.id)}>
+	          					<textarea onChange={this.update('editBody')} placeholder={comment.body} />
+	          					<input type="submit" value="Edit Comment" />
+	          				</form>
+	          				</div>
+	          				)
+	          		}else {
+	          			editForm = (
+			          			<div>
+				          			<p className ="comment-body-text">{comment.body}</p>
+				          			 <div>
+				              			{this.renderDeleteCommentButton(comment)}
+				              		 </div>
+			              		</div>
+			          		)
+	          		}
 	        return (
 	          <li key={idx} className="comment-list-item">
 	          	<div className="comments-show-header">
@@ -74,10 +116,9 @@ class CommentForm extends React.Component {
 	          			<p className="comment-date">{new Date(comment.createdAt).toDateString()}</p>
 	          		</div>
 	          	</div>
-	              <p className ="comment-body-text">{comment.body}</p>
-	              <div>
-	              	{this.renderDeleteCommentButton(comment)}
-	              </div>
+
+	    			{editForm}
+	                
 	          </li>
 	        )
 	      })
@@ -93,6 +134,8 @@ class CommentForm extends React.Component {
 
 
 	render(){
+
+		console.log(this.state)
 
 		return(
 			<div className="comments-container">

@@ -13,11 +13,22 @@ class Api::CommentsController < ApplicationController
 		render :show
 	end
 
+	def update
+	    @comment = Comment.find(params[:comment][:id])
+
+	    if @comment.update_attributes(body: params[:comment][:comment])
+	      render :show
+	    else
+	      render json: ["Can't edit this comment"], status: 404
+	    end
+  	end
+
+
 	def destroy
 		@comment = Comment.find(params[:id])
 		@comment.destroy
 
-		render :show
+		render json: @comment
 	end
 
 	def show

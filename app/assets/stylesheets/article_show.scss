@@ -20,3 +20,12 @@ a.article-index-item-title {
     display: flex;
     flex-direction: column;
 }
+
+.seperator {
+    background-color: #ccc;
+    height: 1px;
+    width: 174px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 30px;
+}

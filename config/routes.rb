@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       resources :steps, only: [:index]
   	end
     resources :steps, except: [:new, :edit, :index]
-    resources :comments, only: [:destroy, :show]
+    resources :comments, only: [:destroy, :show, :update]
     resources :searches, only: [:index]
 
   end

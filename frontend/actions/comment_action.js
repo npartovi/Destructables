@@ -12,12 +12,17 @@ export const fetchComments = (articleId) => dispatch => (
 
 export const createComment = (comment) => dispatch => (
 	CommentApiUtil.createComment(comment.body, comment.articleId)
-	.then(comment => dispatch(receiveComment(comment)))
+		.then(comment => dispatch(receiveComment(comment)))
 );
 
 export const deleteComment = (commentId) => dispatch =>(
 	CommentApiUtil.deleteComment(commentId)
-	.then(comment => dispatch(removeComment(comment)))
+		.then(comment => dispatch(removeComment(comment)))
+);
+
+export const updateComment = (comment) => dispatch => (
+	CommentApiUtil.updateComment(comment)
+		.then(comment => dispatch(receiveComment(comment)))
 );
 
 

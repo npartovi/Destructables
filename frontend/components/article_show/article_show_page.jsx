@@ -24,6 +24,7 @@ class ArticleShow extends React.Component {
 						deleteComment={this.props.deleteComment}
 						currentUser={this.props.currentUser}
 						createComment={this.props.createComment}
+						updateComment={this.props.updateComment}
 					 />
 				</div>
 			)
@@ -37,7 +38,8 @@ class ArticleShow extends React.Component {
 		if(this.props.steps){
 			return(
 				Object.values(this.props.steps).map((step,idx) => (
-					<div className="step-show-container">
+					<div key={idx} className="step-show-container">
+						<div className="seperator"></div>
 						<h1 className="step-show-header">Step{idx + 1} : {step.title}</h1>
 						<img className="step-show-img" src={step.stepImg} />
 						<div className ="step-show-body">
