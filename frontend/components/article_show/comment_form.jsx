@@ -91,9 +91,9 @@ class CommentForm extends React.Component {
 	          		if (comment.id === this.state.editComment){
 	          			editForm =  (
 	          				<div>
-	          				<form className="" onSubmit={() => this.editSubmitHandler(comment.id)}>
-	          					<textarea onChange={this.update('editBody')} placeholder={comment.body} />
-	          					<input type="submit" value="Edit Comment" />
+	          				<form className="edit-form" onSubmit={() => this.editSubmitHandler(comment.id)}>
+	          					<textarea className="edit-text-box" onChange={this.update('editBody')} placeholder={comment.body} />
+	          					<input className="edit-text-submit" type="submit" value="Edit Comment" />
 	          				</form>
 	          				</div>
 	          				)
