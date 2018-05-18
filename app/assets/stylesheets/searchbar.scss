@@ -42,4 +42,19 @@ span.search-title {
     bottom: 20px;
 }
 
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    padding: 7.2px;
+    color: white;
+    background-color: #c8c8c8;
+    border-color: #ccc;
+    border-radius: 0 4px 4px 0;
+    position: relative;
+    right: 3px;
+}
+
 

@@ -27,13 +27,16 @@ class Search extends React.Component {
   render() {
     return (
       <div className="navbar-search-container">
-        <input
-          className="navbar-search-input"
-          type="text"
-          onChange={this.handleChange}
-          placeholder="Let's Disassemble  ..."
-          value={this.state.searchVal}
-          />
+        <div className="search-container">
+          <input
+            className="navbar-search-input"
+            type="text"
+            onChange={this.handleChange}
+            placeholder="Let's Disassemble  ..."
+            value={this.state.searchVal}
+            />
+          <i className="fa fa-search search-icon" aria-hidden="true"></i>
+        </div>
         <SearchIndex
           currentUser={this.props.currentUser}
           searchItems={Object.values(this.props.searches)}
