@@ -11,15 +11,15 @@ class SearchIndexItem extends React.Component {
 
     return (
       
-        <li className='search-item'>
-          <Link to={`/articles/${article.id}`} onClick={this.props.clearState} >
+        <Link to={`/articles/${article.id}`} onClick={this.props.clearState} >
+          <li className='search-item'>
             <img
               src={article.imgUrl}
               className='search-thumbnail'
               />
             <span className='search-title'>{article.title}</span>
-          </Link>
-        </li>
+          </li>
+        </Link>
       
     );
   }

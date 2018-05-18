@@ -60,3 +60,7 @@ textarea {
     line-height: 0;
     content: "";
 }
+
+a {
+	text-decoration: none;
+}

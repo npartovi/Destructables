@@ -1,13 +1,26 @@
 .user-profile-banner {
-    text-align: center;
     background: #fff;
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ddd;
     text-align: center;
     padding: 30px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .user-profile-banner img {
     height: 150px;
     border-radius: 50%;
+}
+
+.user-profile-img {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-left: 18px;
 }

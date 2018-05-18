@@ -37,7 +37,7 @@ button.dropdown-new-article {
     width: 100%;
     border-radius: 8px;
     color: white;
-    background-color: black;
+    background-color: #404040;
     font-size: 18px;
 
 }
@@ -51,8 +51,8 @@ button.dropdown-logout {
     font-size: 15px;
     position: relative;
     left: 178px;
-    color: black;
-    bottom: 56px;
+    color: #404040;
+    bottom: 51px;
 }
 
 li.account-dropdown__link.new-article {
@@ -61,14 +61,14 @@ li.account-dropdown__link.new-article {
 }
 
 svg.svg-inline--fa.fa-user-circle.fa-w-16.fa-2x {
-    color: black;
+    color: #404040;
     top: 6px;
     position: relative;
 }
 
 p.display-name {
     font-size: 23px;
-    color: black;
+    color: #404040;
     text-decoration: none;
     position: relative;
     left: 45px;

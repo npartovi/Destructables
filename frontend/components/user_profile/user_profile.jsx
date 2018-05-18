@@ -33,8 +33,10 @@ class UserProfile extends React.Component {
 	renderHeader(){
 		return(
 			<div className="user-profile-banner">
-				<img src={this.props.currentUser.profileImg} />
-				<h1>{this.props.currentUser.username}</h1>
+				<div className="user-profile-img">
+					<img src={this.props.currentUser.profileImg} />
+					<h1>{this.props.currentUser.username}</h1>
+				</div>
 			</div>
 		)
 	}
