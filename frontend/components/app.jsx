@@ -8,6 +8,7 @@ import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import ArticleFormContainer from './articles/article_form_container';
 import ArticleShowContainer from './article_show/article_show_container';
+import UserProfileContainer from './user_profile/user_profile_container';
 
 import Footer from './footer/footer';
 import Splash from './session/splash';
@@ -25,6 +26,7 @@ const App =() => (
 				<AuthRoute path="/signup" component={SignupFormContainer} />
 				<ProtectedRoute path="/articles/new" component={ArticleFormContainer} />
 				<Route path="/articles/:articleId" component={ArticleShowContainer} />
+				<Route path="/users" component={UserProfileContainer}/>
 				<Route path= "/" component={Splash} />
 			</Switch>
 

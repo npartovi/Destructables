@@ -23,10 +23,10 @@ class UserDropDown extends React.Component {
 		        <DropdownContent>
 			          <ul className="account-dropdown__quick-links account-dropdown__segment">
 			            <li className="account-dropdown__link">
-			              <a className="account-dropdown__link__anchor" href="#" onClick={this.handleLinkClick}>
-			              	<i className="fas fa-user-circle fa-2x"></i><p className="display-name">{this.props.currentUser}</p>
+			              <div className="account-dropdown__link__anchor" href="#" onClick={this.handleLinkClick}>
+			              	<Link to="/users"><i className="fas fa-user-circle fa-2x"></i><p className="display-name">{this.props.currentUser}</p></Link>
 			                <button className="dropdown-logout" onClick={this.props.logout}>Log Out</button>
-			              </a>
+			              </div>
 			            </li>
 			            <li className="account-dropdown__link new-article">
 			              <Link to="articles/new" className="account-dropdown__link__anchor" href="#" onClick={this.handleLinkClick}>

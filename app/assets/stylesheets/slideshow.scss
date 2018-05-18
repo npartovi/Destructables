@@ -3,12 +3,6 @@
 	width: 100%;
 }
 
-.slider.one {
-	background-image: image-url("slide1.jpg");
-	background-size: 100%;
-	background-position-y: -20px;
-}
-
 .slider.two {
 	background-image: image-url("slide2.jpg");
 	background-size: 100%;
@@ -30,8 +24,6 @@ ul.slick-dots {
 .slide-show-text {
     position: absolute;
     z-index: 4;
-    top: 100px;
-    right: 100px;
 }
 
 .slide-show-text h1 {

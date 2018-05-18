@@ -1,18 +1,18 @@
 import React from 'react';
-import ArticleIndexItem from './article_index_item';
+import ArticleIndexItem from '../articles_index/article_index_item';
 
 
-class ArticleIndex extends React.Component {
+class UserProfile extends React.Component {
 	constructor(props){
-		super(props);
+		super(props)
 	}
 
 	componentDidMount(){
 		this.props.fetchArticles();
 	}
 
-	renderArticles(){
 
+	renderArticles(){
 		return(
 				this.props.articles.map( article => (
 					<ArticleIndexItem 
@@ -44,4 +44,5 @@ class ArticleIndex extends React.Component {
 
 }
 
-export default ArticleIndex;
+
+export default UserProfile
