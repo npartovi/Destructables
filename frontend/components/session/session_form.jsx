@@ -54,7 +54,6 @@ class SessionForm extends React.Component {
 					<form id="session_inputs" onSubmit={this.handleSubmit}>
 						<input type="text" placeholder="Username" value={this.state.username} onChange={this.update('username')}  />
 						<input type="password" placeholder="Password" value={this.state.password} onChange={this.update('password')} />
-
 						{ email }
 						<button type="submit" >{this.props.formType}</button>
 						<button id="demo_button" onClick={this.demoLogin}  type="submit">Demo Login</button>
