@@ -12,16 +12,18 @@ export const fetchArticle = (id) => (
 	})
 );
 
-export const createArticle = (article) => (
-	$.ajax({
+export const createArticle = (article) => {
+	return( 
+		$.ajax({
 		url: 'api/articles',
 		method: "POST",
 		processData: false,
 		contentType: false,
 		dataType: 'json',
 		data: article 
-	})
-);
+		})
+	);
+};
 
 
 export const deleteArticle = (articleId) => (

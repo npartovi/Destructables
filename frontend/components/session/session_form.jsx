@@ -45,9 +45,7 @@ class SessionForm extends React.Component {
 		}
 
 		let demoButton = undefined
-		if(this.props.formType === "Login"){
-			demoButton = <button id="demo_button" onClick={this.demoLogin}  type="submit">Demo Login</button>
-		}
+		
 
 		return(
 			<div className="form-container">
@@ -59,7 +57,7 @@ class SessionForm extends React.Component {
 
 						{ email }
 						<button type="submit" >{this.props.formType}</button>
-						{ demoButton }
+						<button id="demo_button" onClick={this.demoLogin}  type="submit">Demo Login</button>
 						<p>New to Destructables? {this.props.navLink}</p>
 					</form>
 				</div>
