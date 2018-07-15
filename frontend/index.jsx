@@ -21,8 +21,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 	// window.getState = store.getState;
 	// window.dispatch = store.dispatch;
+<<<<<<< HEAD
 	// window.fetchArticles = fetchArticles;
 	// window.fetchComments = fetchComments;
+=======
+	window.fetchArticles = fetchArticles;
+	window.fetchComments = fetchComments;
+>>>>>>> 854e63d06f1d442a0aeb3ef37f0fe259bfea51fb
 
 	
 	const root = document.getElementById('root');
