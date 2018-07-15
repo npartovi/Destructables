@@ -97,9 +97,6 @@ class ArticleShow extends React.Component {
 
 	render(){
 
-		console.log(this.props.steps)
-		
-
 		return(
 		<div className="show-page-container">
 			<div className="show-page-wrapper">

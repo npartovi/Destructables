@@ -12,36 +12,29 @@ class ArticleIndex extends React.Component {
 	}
 
 	renderArticles(){
-
 		return(
-				this.props.articles.map( article => (
-					<ArticleIndexItem 
-						key={article.id}
-						title={article.title}
-						article={article}
-						imgUrl={article.imgUrl}
-						username={article.userName}
-					/>
-				))
+			this.props.articles.map(article => (
+				<ArticleIndexItem 
+					key={article.id}
+					article={article}
+				/>
+			))
 		)
 	}
-
-
+	
 	render(){
-		if(this.props.articles.length === 0){
+		if(!this.props.articles){
 			return null
 		}
 
 		return(
 			<div className="article-homepage-wrapper">
 				<ul className="article-index-list">
-					{ this.renderArticles() }
+					{this.renderArticles()}
 				</ul>
 			</div>
 		)
-	
 	}
-
 }
 
 export default ArticleIndex;
