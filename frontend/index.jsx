@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	  store = configureStore();
 	}
 
-	window.getState = store.getState;
-	window.dispatch = store.dispatch;
-	window.fetchArticles = fetchArticles;
-	window.fetchComments = fetchComments;
+	// window.getState = store.getState;
+	// window.dispatch = store.dispatch;
+	// window.fetchArticles = fetchArticles;
+	// window.fetchComments = fetchComments;
 
 	
 	const root = document.getElementById('root');
